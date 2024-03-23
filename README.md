@@ -5,6 +5,7 @@
 
 APP for tracking Expenses
 
+
 ### Some ScreenShots
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-23 at 19 12](https://github.com/Gastonfoncea/Mangos/assets/57188392/e889a7e4-c845-407d-804a-731cb59c4e70)
-![Simulator Screenshot - iPhone 15 Pro - 2024-03-23 at 19 11](https://github.com/Gastonfoncea/Mangos/assets/57188392/6bb61f4b-5848-4e72-a528-6a1a24f39c9b)
+![Simulator Screenshot - iPhone 15 Pro - 2024-03-23 at 19 12 19](https://github.com/Gastonfoncea/Mangos/assets/57188392/47cae015-1c0c-4934-bfca-8c625c5b6b96)
+![Simulator Screenshot - iPhone 15 Pro - 2024-03-23 at 19 11 16](https://github.com/Gastonfoncea/Mangos/assets/57188392/68b64bc3-e0ea-4e62-b77d-d73e10d33bc5)
