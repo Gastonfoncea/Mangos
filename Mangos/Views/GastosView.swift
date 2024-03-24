@@ -43,6 +43,7 @@ struct GastosView: View {
                     for index in indexSet{
                         vmRegistros.deleteRegistro(tipo: .Gastos, index: index)
                         suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
+                        vmRegistros.balance()
                         
                     }
                 }

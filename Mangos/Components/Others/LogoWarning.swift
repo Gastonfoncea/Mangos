@@ -11,7 +11,7 @@ struct LogoWarning: View {
     var body: some View {
         ZStack{
             Circle()
-                .foregroundStyle(.red)
+                .foregroundStyle(Color.redG)
                 .frame(width: 30)
                Text("!")
                 .foregroundStyle(.white)

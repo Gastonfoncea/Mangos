@@ -18,25 +18,9 @@ struct Home: View {
     var body: some View {
         NavigationStack{
             VStack{
-                HStack{
-                    HStack{
-                        Text("Welcome,")
-                            .font(.system(size: 26))
-                            .fontWeight(.light)
-                            .foregroundStyle(.gray)
-                            .padding(.leading,20)
-                            .padding(.bottom,10)
-                        Text("Gaston!")
-                            .font(.system(size: 26))
-                            .fontWeight(.light)
-                            .padding(.bottom,10)
-                    }
-                    Spacer()
-                }
-                
-                
-                HStack{
-                    CardMontoHome(balance: vmRegistros.balanceTotal,ingresos: vmRegistros.sumaIngresos ,egresos: vmRegistros.sumaIngresos)
+ 
+            HStack{
+                    CardMontoHome(balance: vmRegistros.balanceTotal,ingresos: vmRegistros.sumaIngresos ,egresos: vmRegistros.sumaEgresos)
                 }
                 
                 HStack(spacing:10){
@@ -86,7 +70,7 @@ struct Home: View {
                     
                 }
             }
-            .offset(y:45)
+            .offset(y:95)
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {
                     NavigationLink(destination:ListOfRegistros(vmRegistros: vmRegistros)) {

@@ -11,6 +11,7 @@ struct NewRegPart2: View {
     
     @StateObject var vmFunctions = GeneralFunctions()
     @ObservedObject var vmRegistros: RegistrosViewModel
+    @ObservedObject var vmNewR : ViewModelNewRegistro
     var tipo: String
     var monto: String
     @State var referencia: String = ""
@@ -28,7 +29,7 @@ struct NewRegPart2: View {
             Text("Monto del \(tipo.dropLast())")
                 .foregroundStyle(Color.fontColor1G)
                 .bold()
-            Text("$ \(vmFunctions.stringToRoundedString(valor: monto))")
+            Text("$ \(vmFunctions.StringToInt(valor: monto))")
                 .font(.system(size: AppTheme.fontSizeMontoNumericoGrande))
                 .foregroundStyle(Color.fontColor1G)
                 .bold()
@@ -94,9 +95,10 @@ struct NewRegPart2: View {
                 
             }
             .padding(.leading,20)
-            .padding(.bottom,50)
-            
+            .padding(.bottom,40)
+    
             Spacer()
+            
             VStack{
                 Button(action: {
                     if referencia.isEmpty {
@@ -117,11 +119,12 @@ struct NewRegPart2: View {
                     ButtonAceptar(name: "Aceptar")
                 })
             }
-            .padding(.bottom,40)
+            .padding(.bottom,60)
+           
         }
     }
 }
 
 #Preview {
-    NewRegPart2(vmRegistros: RegistrosViewModel(), tipo: "Ingresos", monto: "")
+    NewRegPart2(vmRegistros: RegistrosViewModel(), vmNewR: ViewModelNewRegistro(), tipo: "Ingresos", monto: "")
 }

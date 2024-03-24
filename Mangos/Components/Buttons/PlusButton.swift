@@ -10,12 +10,13 @@ import SwiftUI
 struct PlusButton: View {
     var body: some View {
         ZStack{
+            
             Circle()
                 .frame(width: 65,height: 65)
                 .foregroundStyle(Color.accentColor)
 
             Image(systemName: "plus")
-                .foregroundStyle(Color.blackWhite)
+                .foregroundStyle(Color.accentColorInvertido)
                 .font(.title)
                 .fontWeight(.semibold)
         }

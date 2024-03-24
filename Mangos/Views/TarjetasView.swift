@@ -22,7 +22,7 @@ struct TarjetasView: View {
                         .font(.system(size: 20))
                         .foregroundStyle(.gray)
                     
-                    Text("Tus Ahorros acumulados")
+                    Text("Tus Gastos de tarjeta")
                         .font(.system(size: 20))
                         .padding(.top,3)
                         .bold()

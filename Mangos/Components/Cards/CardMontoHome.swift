@@ -17,7 +17,7 @@ struct CardMontoHome: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 10)
-                .foregroundStyle(Color.accentColor)
+                .foregroundStyle(Color.cardHome)
             VStack{
                 VStack{
                     HStack{
