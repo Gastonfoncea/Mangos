@@ -66,9 +66,14 @@ struct NewRegPart2: View {
                 
                 VStack{
                     HStack{
-                        Text("Categoria: ")
+                        Image(systemName: "plus.app")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 29)
+                        
                         Text("\(tipo.dropLast())")
                             .fontWeight(.semibold)
+                            .padding(.leading,15)
                         LogoCirclePorTipo(tipo: tipo)
                             .padding(.leading)
                         Spacer()
@@ -119,9 +124,10 @@ struct NewRegPart2: View {
                     ButtonAceptar(name: "Aceptar")
                 })
             }
-            .padding(.bottom,60)
+            .padding(.bottom,100)
            
         }
+        .ignoresSafeArea(.keyboard)
     }
 }
 

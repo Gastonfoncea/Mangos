@@ -46,7 +46,7 @@ struct TarjetasView: View {
                         
                     }
                 }
-                .listRowSeparator(.hidden)
+              
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)

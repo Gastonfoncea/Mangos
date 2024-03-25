@@ -47,7 +47,7 @@ struct IngresosView: View {
                         
                     }
                 }
-                .listRowSeparator(.hidden)
+                //.listRowSeparator(.hidden)
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)

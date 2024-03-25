@@ -47,7 +47,7 @@ struct GastosView: View {
                         
                     }
                 }
-                .listRowSeparator(.hidden)
+               
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)

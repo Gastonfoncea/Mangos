@@ -65,12 +65,10 @@ struct CardMontoHome: View {
                 .padding(.bottom,20)
 
             }
-            
-            
-            
         }
-        .frame(width: .infinity,height: 180)
-        .padding(.horizontal,20)
+        .frame(maxWidth: .infinity)
+        .frame(height: 180)
+       // .padding(.horizontal,20)
         .shadow(radius: 5)
         .onAppear {
             

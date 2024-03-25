@@ -21,7 +21,8 @@ struct ButtonTipo: View {
                 .font(.footnote)
                 .fontWeight(.semibold)
         }
-        .frame(width: 80,height: 40)
+        .frame(maxWidth: 95)
+        .frame(height: 40)
         .shadow(radius: 5)
         
     }

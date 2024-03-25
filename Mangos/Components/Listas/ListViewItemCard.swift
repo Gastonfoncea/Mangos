@@ -18,26 +18,27 @@ struct ListViewItemCard: View {
     var fecha: Date
     
     var body: some View {
-        ZStack{
-            RoundedRectangle(cornerRadius: 8)
-                .fill(Color.cardsColorG)
-                .overlay(
-                    RoundedRectangle(cornerRadius: 6)
-                        .stroke(Color.gray.opacity(0.1), lineWidth: 0.5)
-                )
+        VStack{
             HStack{
+                LogoCirclePorTipo(tipo: tipo)
                 VStack(alignment:.leading,spacing: 6){
                     Text(descripcion)
                         .font(.system(size: AppTheme.fontSizeListas))
-                        .foregroundStyle(Color.accentColor)
-                        .bold()
+                        .foregroundStyle(.fontColor1G)
+                        .fontWeight(.medium)
                         .lineLimit(1)
                     Text(tipo)
                         .font(.footnote)
                         .foregroundStyle(Color.accentColor)
                         .opacity(0.7)
                         .lineLimit(1)
-                    
+                }
+                .padding(.leading)
+                Spacer()
+                VStack(alignment: .trailing,spacing: 6){
+                    Text("$ \(generalFunc.StringToInt(valor: monto))") //monto
+                        .font(.system(size: AppTheme.montosTarjeta))
+                        .fontWeight(.medium)
                     Text(generalFunc.DateString(fecha: fecha))
                         .font(.footnote)
                         .foregroundStyle(Color.accentColor)
@@ -45,19 +46,11 @@ struct ListViewItemCard: View {
                         .opacity(0.7)
                         .lineLimit(1)
                 }
-                Spacer()
-                Text("$ \(generalFunc.StringToInt(valor: monto))") //monto
-                    .foregroundStyle(appTheme.ColorMontoTarjeta(tipo: tipo))
-                    .font(.system(size: AppTheme.montosTarjeta))
-                    .bold()
-                
             }
-            .padding(.horizontal)
+      
         }
-        .frame(height: 90)
+        .frame(height: 60)
         .frame(maxWidth:.infinity)
-
-
     }
 }
 

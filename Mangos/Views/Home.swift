@@ -22,7 +22,7 @@ struct Home: View {
             HStack{
                     CardMontoHome(balance: vmRegistros.balanceTotal,ingresos: vmRegistros.sumaIngresos ,egresos: vmRegistros.sumaEgresos)
                 }
-                
+                .padding(.horizontal,20)
                 HStack(spacing:10){
                     NavigationLink(destination:IngresosView(vmRegistros: vmRegistros)){
                         ButtonTipo(tipo: "Ingresos")
@@ -36,10 +36,9 @@ struct Home: View {
                     NavigationLink(destination:TarjetasView(vmRegistros: vmRegistros)){
                         ButtonTipo(tipo: "Tarjetas")
                     }
-                   
-                  
-                   
                 }
+                .frame(maxWidth: .infinity)
+                .padding(.horizontal,20)
                 .padding(.top,20)
                 
                 VStack{
@@ -47,17 +46,18 @@ struct Home: View {
                         Text("Ultimas transacciones")
                             .font(.title3)
                             .fontWeight(.light)
-                            .padding(.leading)
+                            
                         Spacer()
                         NavigationLink(destination: ListOfMovimientos(vmRegistros: vmRegistros)) {
                             Text("Ver todas")
-                                .padding(.trailing)
+                                
                                 .font(.subheadline)
                                 .fontWeight(.semibold)
                                 .foregroundStyle(Color.blueColorG)
                         }
                     }
-                    .padding(.horizontal,10)
+                    .frame(maxWidth: .infinity)
+                    .padding(.horizontal,20)
                     .padding(.top,20)
                     .padding(.bottom,6)
                     
@@ -70,6 +70,7 @@ struct Home: View {
                     
                 }
             }
+           // .padding(.horizontal,20)
             .offset(y:95)
             .toolbar {
                 ToolbarItem(placement: .bottomBar) {

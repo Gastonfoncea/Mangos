@@ -22,7 +22,7 @@ struct ListHomeItemCard: View {
             VStack(alignment:.leading){
                 Text("\(descripcion)")
                     .foregroundStyle(.fontColor1G)
-                    .fontWeight(.semibold)
+                    .fontWeight(.medium)
                     .font(.system(size: AppTheme.fontSizeListas))
                     .padding(.leading)
                 Text("\(tipo)")
@@ -34,7 +34,7 @@ struct ListHomeItemCard: View {
             Spacer()
             Text("$ \(generalFunc.StringToInt(valor: monto))")
                 .font(.system(size: AppTheme.montosTarjeta))
-                .bold()
+                .fontWeight(.medium)
             
         }
         .padding(.vertical,15)

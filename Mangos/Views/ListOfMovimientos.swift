@@ -22,12 +22,12 @@ struct ListOfMovimientos: View {
                         .font(.system(size: 20))
                         .foregroundStyle(.gray)
                     
-                    Text("Tus Ingresos acumulados")
+                    Text("Tus Registros")
                         .font(.system(size: 20))
                         .padding(.top,3)
                         .bold()
                     
-                    Text("\(vmRegistros.balanceTotal)")
+                    Text("$ \(vmRegistros.balanceTotal)")
                         .font(.largeTitle)
                         .bold()
                         .padding(.top)
@@ -37,9 +37,9 @@ struct ListOfMovimientos: View {
                 .padding(.vertical, 16)
                 
                 ForEach(vmRegistros.fetchRegistrosTotal()) {item in
-                    ListViewItemCard(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, colorMonto: .green, fecha: item.fecha)
+                    ListViewItemCard(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, colorMonto: Color.blackAndWhite, fecha: item.fecha)
                 }
-                .listRowSeparator(.hidden)
+                
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)
