@@ -43,7 +43,7 @@ class AppTheme: ObservableObject {
             return "takeoutbag.and.cup.and.straw.fill"
         case "Ahorros":
             return "handbag.fill"
-        case "tarjetas":
+        case "Tarjetas":
             return "creditcard.fill"
         default:
             return "house"
@@ -59,7 +59,7 @@ class AppTheme: ObservableObject {
         case .ahorros:
             return "Ahorros"
         case .tarjeta:
-            return "Tartjeta"
+            return "Tarjetas"
         }
     }
     

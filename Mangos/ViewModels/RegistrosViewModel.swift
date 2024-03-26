@@ -105,7 +105,8 @@ class RegistrosViewModel: ObservableObject {
             
         case .Ahorros:
             let ahorrosPredicate = #Predicate<RegistrosModel> {$0.tipo == "Ahorros"}
-            let ahorrosDescriptor = FetchDescriptor<RegistrosModel>(predicate: ahorrosPredicate,sortBy: [SortDescriptor(\RegistrosModel.fecha,order: .reverse)])
+            let ahorrosDescriptor = FetchDescriptor<RegistrosModel>(predicate: ahorrosPredicate,sortBy: 
+                [SortDescriptor(\RegistrosModel.fecha,order: .reverse)])
             do {
                 let ahorros = try modelContext.fetch(ahorrosDescriptor)
                 return ahorros
@@ -132,7 +133,7 @@ class RegistrosViewModel: ObservableObject {
         switch tipo {
         case .Ingresos:
             let ingresosPredicate = #Predicate<RegistrosModel> {$0.tipo == "Ingresos"}
-            let ingresosDescriptor = FetchDescriptor<RegistrosModel> (predicate: ingresosPredicate)
+            let ingresosDescriptor = FetchDescriptor<RegistrosModel>(predicate: ingresosPredicate,sortBy: [SortDescriptor(\RegistrosModel.fecha,order: .reverse)])
             do {
                 let ingresos = try modelContext.fetch(ingresosDescriptor)
                 modelContext.delete(ingresos[index])
@@ -142,7 +143,7 @@ class RegistrosViewModel: ObservableObject {
             
         case .Gastos:
             let gastosPredicate = #Predicate<RegistrosModel> {$0.tipo == "Gastos"}
-            let gastosDescriptor = FetchDescriptor<RegistrosModel> (predicate: gastosPredicate)
+            let gastosDescriptor = FetchDescriptor<RegistrosModel>(predicate: gastosPredicate,sortBy: [SortDescriptor(\RegistrosModel.fecha,order: .reverse)])
             do {
                 let gastos = try modelContext.fetch(gastosDescriptor)
                 modelContext.delete(gastos[index])
@@ -153,7 +154,7 @@ class RegistrosViewModel: ObservableObject {
             
         case .Ahorros:
             let ahorrosPredicate = #Predicate<RegistrosModel> {$0.tipo == "Ahorros"}
-            let ahorrosDescriptor = FetchDescriptor<RegistrosModel> (predicate: ahorrosPredicate)
+            let ahorrosDescriptor = FetchDescriptor<RegistrosModel>(predicate: ahorrosPredicate,sortBy: [SortDescriptor(\RegistrosModel.fecha,order: .reverse)])
             do {
                 let ahorros = try modelContext.fetch(ahorrosDescriptor)
                 modelContext.delete(ahorros[index])
@@ -163,7 +164,7 @@ class RegistrosViewModel: ObservableObject {
             
         case .Tarjetas:
             let tarjetasPredicate = #Predicate<RegistrosModel> {$0.tipo == "Tarjetas"}
-            let tarjetasDescriptor = FetchDescriptor<RegistrosModel> (predicate: tarjetasPredicate)
+            let tarjetasDescriptor = FetchDescriptor<RegistrosModel>(predicate: tarjetasPredicate,sortBy: [SortDescriptor(\RegistrosModel.fecha,order: .reverse)])
             do {
                 let tarjetas = try modelContext.fetch(tarjetasDescriptor)
                 modelContext.delete(tarjetas[index])
