@@ -14,7 +14,6 @@
 		514EE2172BA0E461007C644B /* NewRegistroP1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE2162BA0E461007C644B /* NewRegistroP1.swift */; };
 		514EE2192BA0E594007C644B /* MontoTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE2182BA0E594007C644B /* MontoTextfield.swift */; };
 		514EE21E2BA2974E007C644B /* LogoCirclePorTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE21D2BA2974E007C644B /* LogoCirclePorTipo.swift */; };
-		514EE2202BA391A5007C644B /* RegEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE21F2BA391A5007C644B /* RegEnum.swift */; };
 		514EE24E2BA54463007C644B /* ListViewItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE24D2BA54463007C644B /* ListViewItemCard.swift */; };
 		519ABFB22B9BD0AD007B919E /* MangosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFB12B9BD0AD007B919E /* MangosApp.swift */; };
 		519ABFB42B9BD0AD007B919E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFB32B9BD0AD007B919E /* Home.swift */; };
@@ -58,7 +57,6 @@
 		514EE2162BA0E461007C644B /* NewRegistroP1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegistroP1.swift; sourceTree = "<group>"; };
 		514EE2182BA0E594007C644B /* MontoTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontoTextfield.swift; sourceTree = "<group>"; };
 		514EE21D2BA2974E007C644B /* LogoCirclePorTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCirclePorTipo.swift; sourceTree = "<group>"; };
-		514EE21F2BA391A5007C644B /* RegEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegEnum.swift; sourceTree = "<group>"; };
 		514EE24D2BA54463007C644B /* ListViewItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewItemCard.swift; sourceTree = "<group>"; };
 		519ABFAE2B9BD0AD007B919E /* Mangos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mangos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519ABFB12B9BD0AD007B919E /* MangosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangosApp.swift; sourceTree = "<group>"; };
@@ -222,7 +220,6 @@
 				519ABFCF2B9D2CE2007B919E /* RegistrosModel.swift */,
 				519ABFDD2B9D561C007B919E /* AppTheme.swift */,
 				514EE2142BA093BF007C644B /* RegistrosList.swift */,
-				514EE21F2BA391A5007C644B /* RegEnum.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,7 +352,6 @@
 				519ABFDE2B9D561C007B919E /* AppTheme.swift in Sources */,
 				519ABFEC2B9D7A9C007B919E /* TextFieldNumerico.swift in Sources */,
 				519ABFD22B9D2D9E007B919E /* TabBarView.swift in Sources */,
-				514EE2202BA391A5007C644B /* RegEnum.swift in Sources */,
 				514EE20F2B9FF0AA007C644B /* ViewModelIngresos.swift in Sources */,
 				519ABFCA2B9D249C007B919E /* CardContainer.swift in Sources */,
 				51B28A852BABAB9600667F14 /* ListHomeItemCard.swift in Sources */,
