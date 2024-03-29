@@ -14,7 +14,7 @@ class AppTheme: ObservableObject {
     
     static let fontSizeMontoNumericoGrande: CGFloat = 32
     static let fontSizeListas: CGFloat = 18
-    static let montosTarjeta: CGFloat = 18
+    static let montosTarjeta: CGFloat = 16
     
     
     enum tipo{

@@ -32,12 +32,15 @@ struct ListHomeItemCard: View {
                     .padding(.leading)
             }
             Spacer()
-            Text("$ \(generalFunc.StringToInt(valor: monto))")
-                .font(.system(size: AppTheme.montosTarjeta))
-                .fontWeight(.medium)
+            VStack{
+                Text("$ \(generalFunc.StringToInt(valor: monto))")
+                    .font(.system(size: AppTheme.montosTarjeta))
+                    .fontWeight(.medium)
+                    .padding(.bottom)
+            }
             
         }
-        .padding(.vertical,15)
+        .padding(.vertical,2)
         
     }
 }
