@@ -18,7 +18,9 @@ struct Home: View {
     var body: some View {
         NavigationStack{
             VStack{
- 
+                NavigationLink(destination:DolarView()){
+                    Text("Vamos al dolar chabal, se puede ")
+                }
             HStack{
                     CardMontoHome(balance: vmRegistros.balanceTotal,ingresos: vmRegistros.sumaIngresos ,egresos: vmRegistros.sumaEgresos)
                 }

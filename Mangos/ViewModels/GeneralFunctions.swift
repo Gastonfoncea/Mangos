@@ -10,6 +10,8 @@ import Foundation
 
 class GeneralFunctions: ObservableObject {
     
+    
+    
     //Conversion de datos
     func StringToDouble(valor:String) -> Double {
         let error = 0.00
@@ -54,6 +56,30 @@ class GeneralFunctions: ObservableObject {
         
         let currentDate = Date()
         return dateFormatter.string(from: currentDate)
+    }
+    
+    
+    ///Formate Day and Hour
+    func formatedDate(date:String) -> String {
+        let dateFormatter: DateFormatter = {
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
+            return formatter
+        }()
+        
+        guard let date = dateFormatter.date(from: date) else {
+            return "fecha invalida"
+        }
+        
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.hour, .minute, .day], from: date)
+        
+        if let hour = components.hour, let minute = components.minute, let day = components.day {
+            return "\(hour > 12 ? hour - 12 : hour):\(minute) \(hour < 12 ? "AM" : "PM") del día \(day)"
+            
+        } else {
+            return "Fecha inválida"
+        }
     }
     
     

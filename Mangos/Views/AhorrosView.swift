@@ -43,6 +43,10 @@ struct AhorrosView: View {
                     for index in indexSet{
                         vmRegistros.deleteRegistro(tipo: .Ahorros, index: index)
                         suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
+                        vmRegistros.balance()
+                        vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
+                        vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
+                        vmRegistros.sumaGastos = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
                         
                     }
                 }

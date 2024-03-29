@@ -15,6 +15,11 @@
 		514EE2192BA0E594007C644B /* MontoTextfield.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE2182BA0E594007C644B /* MontoTextfield.swift */; };
 		514EE21E2BA2974E007C644B /* LogoCirclePorTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE21D2BA2974E007C644B /* LogoCirclePorTipo.swift */; };
 		514EE24E2BA54463007C644B /* ListViewItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE24D2BA54463007C644B /* ListViewItemCard.swift */; };
+		515C88162BB5F2CE007A8BCD /* DolarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C88152BB5F2CE007A8BCD /* DolarModel.swift */; };
+		515C88182BB5F3B6007A8BCD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C88172BB5F3B6007A8BCD /* NetworkManager.swift */; };
+		515C881A2BB5F413007A8BCD /* DolarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C88192BB5F413007A8BCD /* DolarView.swift */; };
+		515C881C2BB5F50D007A8BCD /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C881B2BB5F50D007A8BCD /* NetworkErrors.swift */; };
+		515C881E2BB5F568007A8BCD /* DolarEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 515C881D2BB5F568007A8BCD /* DolarEnum.swift */; };
 		519ABFB22B9BD0AD007B919E /* MangosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFB12B9BD0AD007B919E /* MangosApp.swift */; };
 		519ABFB42B9BD0AD007B919E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFB32B9BD0AD007B919E /* Home.swift */; };
 		519ABFB62B9BD0AF007B919E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519ABFB52B9BD0AF007B919E /* Assets.xcassets */; };
@@ -44,9 +49,11 @@
 		51B28AAD2BAF81B300667F14 /* LogoWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28AAC2BAF81B300667F14 /* LogoWarning.swift */; };
 		51B28AAF2BAF842100667F14 /* TarjetasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28AAE2BAF842100667F14 /* TarjetasView.swift */; };
 		51BBA6542BAF97F000E2D960 /* ViewModelNewRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */; };
+		51D39D512BB6097F00246820 /* DolarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D39D502BB6097F00246820 /* DolarViewModel.swift */; };
 		51D4F0292BA794B0008259E3 /* IngresosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F0282BA794B0008259E3 /* IngresosView.swift */; };
 		51D4F02B2BA7B01F008259E3 /* GastosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F02A2BA7B01F008259E3 /* GastosView.swift */; };
 		51ED8A342BA91C940079AF36 /* AhorrosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED8A332BA91C940079AF36 /* AhorrosView.swift */; };
+		51EF66DB2BB661A2006DB89F /* DolarCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EF66DA2BB661A2006DB89F /* DolarCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,11 @@
 		514EE2182BA0E594007C644B /* MontoTextfield.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MontoTextfield.swift; sourceTree = "<group>"; };
 		514EE21D2BA2974E007C644B /* LogoCirclePorTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoCirclePorTipo.swift; sourceTree = "<group>"; };
 		514EE24D2BA54463007C644B /* ListViewItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewItemCard.swift; sourceTree = "<group>"; };
+		515C88152BB5F2CE007A8BCD /* DolarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarModel.swift; sourceTree = "<group>"; };
+		515C88172BB5F3B6007A8BCD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		515C88192BB5F413007A8BCD /* DolarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarView.swift; sourceTree = "<group>"; };
+		515C881B2BB5F50D007A8BCD /* NetworkErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
+		515C881D2BB5F568007A8BCD /* DolarEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarEnum.swift; sourceTree = "<group>"; };
 		519ABFAE2B9BD0AD007B919E /* Mangos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mangos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519ABFB12B9BD0AD007B919E /* MangosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangosApp.swift; sourceTree = "<group>"; };
 		519ABFB32B9BD0AD007B919E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -88,9 +100,11 @@
 		51B28AAC2BAF81B300667F14 /* LogoWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoWarning.swift; sourceTree = "<group>"; };
 		51B28AAE2BAF842100667F14 /* TarjetasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetasView.swift; sourceTree = "<group>"; };
 		51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewRegistro.swift; sourceTree = "<group>"; };
+		51D39D502BB6097F00246820 /* DolarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarViewModel.swift; sourceTree = "<group>"; };
 		51D4F0282BA794B0008259E3 /* IngresosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngresosView.swift; sourceTree = "<group>"; };
 		51D4F02A2BA7B01F008259E3 /* GastosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosView.swift; sourceTree = "<group>"; };
 		51ED8A332BA91C940079AF36 /* AhorrosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhorrosView.swift; sourceTree = "<group>"; };
+		51EF66DA2BB661A2006DB89F /* DolarCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +148,7 @@
 				519ABFCB2B9D2572007B919E /* CardMontoHome.swift */,
 				519ABFD92B9D54FE007B919E /* TopCardContainerHome.swift */,
 				519ABFCD2B9D2A11007B919E /* InfoNameCard.swift */,
+				51EF66DA2BB661A2006DB89F /* DolarCard.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -158,6 +173,16 @@
 			path = Others;
 			sourceTree = "<group>";
 		};
+		515C88142BB5F2BD007A8BCD /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				515C88172BB5F3B6007A8BCD /* NetworkManager.swift */,
+				515C881B2BB5F50D007A8BCD /* NetworkErrors.swift */,
+				515C881D2BB5F568007A8BCD /* DolarEnum.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		519ABFA52B9BD0AD007B919E = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +204,7 @@
 			children = (
 				519ABFB12B9BD0AD007B919E /* MangosApp.swift */,
 				519ABFB52B9BD0AF007B919E /* Assets.xcassets */,
+				515C88142BB5F2BD007A8BCD /* Managers */,
 				519ABFB72B9BD0AF007B919E /* Preview Content */,
 				519ABFC12B9CC23D007B919E /* ViewModels */,
 				519ABFC02B9CC239007B919E /* Models */,
@@ -210,6 +236,7 @@
 				51ED8A332BA91C940079AF36 /* AhorrosView.swift */,
 				51B28AAE2BAF842100667F14 /* TarjetasView.swift */,
 				519ABFD72B9D3334007B919E /* Profile.swift */,
+				515C88192BB5F413007A8BCD /* DolarView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -220,6 +247,7 @@
 				519ABFCF2B9D2CE2007B919E /* RegistrosModel.swift */,
 				519ABFDD2B9D561C007B919E /* AppTheme.swift */,
 				514EE2142BA093BF007C644B /* RegistrosList.swift */,
+				515C88152BB5F2CE007A8BCD /* DolarModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -231,6 +259,7 @@
 				514EE20E2B9FF0AA007C644B /* ViewModelIngresos.swift */,
 				514EE2102B9FFD5A007C644B /* GeneralFunctions.swift */,
 				51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */,
+				51D39D502BB6097F00246820 /* DolarViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -329,13 +358,19 @@
 				519ABFEE2B9D8061007B919E /* NewRegPart2.swift in Sources */,
 				51B28AAD2BAF81B300667F14 /* LogoWarning.swift in Sources */,
 				519ABFD82B9D3334007B919E /* Profile.swift in Sources */,
+				515C88182BB5F3B6007A8BCD /* NetworkManager.swift in Sources */,
 				519ABFE62B9D71FC007B919E /* PlusButton2.swift in Sources */,
 				519ABFE82B9D7970007B919E /* ButtonAceptar.swift in Sources */,
 				514EE21E2BA2974E007C644B /* LogoCirclePorTipo.swift in Sources */,
 				519ABFB42B9BD0AD007B919E /* Home.swift in Sources */,
+				515C881C2BB5F50D007A8BCD /* NetworkErrors.swift in Sources */,
+				51EF66DB2BB661A2006DB89F /* DolarCard.swift in Sources */,
 				514EE2112B9FFD5A007C644B /* GeneralFunctions.swift in Sources */,
 				514EE2172BA0E461007C644B /* NewRegistroP1.swift in Sources */,
+				515C88162BB5F2CE007A8BCD /* DolarModel.swift in Sources */,
+				51D39D512BB6097F00246820 /* DolarViewModel.swift in Sources */,
 				514EE2152BA093BF007C644B /* RegistrosList.swift in Sources */,
+				515C881A2BB5F413007A8BCD /* DolarView.swift in Sources */,
 				519ABFCC2B9D2572007B919E /* CardMontoHome.swift in Sources */,
 				51B28A872BABC41A00667F14 /* ButtonTipo.swift in Sources */,
 				514EE2192BA0E594007C644B /* MontoTextfield.swift in Sources */,
@@ -350,6 +385,7 @@
 				519ABFE42B9D66C2007B919E /* TabBarCustom.swift in Sources */,
 				519ABFC62B9D1DCA007B919E /* CardContainerExample.swift in Sources */,
 				519ABFDE2B9D561C007B919E /* AppTheme.swift in Sources */,
+				515C881E2BB5F568007A8BCD /* DolarEnum.swift in Sources */,
 				519ABFEC2B9D7A9C007B919E /* TextFieldNumerico.swift in Sources */,
 				519ABFD22B9D2D9E007B919E /* TabBarView.swift in Sources */,
 				514EE20F2B9FF0AA007C644B /* ViewModelIngresos.swift in Sources */,
