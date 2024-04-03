@@ -27,7 +27,7 @@ struct AhorrosView: View {
                         .padding(.top,3)
                         .bold()
                     
-                    Text("$ \(suma)")
+                    Text("$ \(vmRegistros.sumaAhorros)")
                         .font(.largeTitle)
                         .bold()
                         .padding(.top)
@@ -56,10 +56,7 @@ struct AhorrosView: View {
             .scrollIndicators(.hidden)
 
         }
-        .onAppear{
-            suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
-            vmRegistros.balance()
-        }
+
 
     }
 }

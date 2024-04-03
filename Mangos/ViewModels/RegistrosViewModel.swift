@@ -292,6 +292,7 @@ class RegistrosViewModel: ObservableObject {
         return suma
     }
     
+    
     func sumatoriaEgresos() -> Int {
         let gastos = sumarRegistrosPorTipo(tipo: .Gastos)
         let tarjetas = sumarRegistrosPorTipo(tipo: .Tarjetas)
@@ -300,6 +301,25 @@ class RegistrosViewModel: ObservableObject {
     }
     
     
+    func sumaSoloIngresos() {
+        let ingresos = sumarRegistrosPorTipo(tipo: .Ingresos)
+        sumaIngresos = ingresos
+    }
+    
+    func sumaSoloGastos() {
+        let gastos = sumarRegistrosPorTipo(tipo: .Gastos)
+        sumaGastos = gastos
+    }
+    
+    func sumaSoloAhorros() {
+        let ahorros = sumarRegistrosPorTipo(tipo: .Ahorros)
+        sumaAhorros = ahorros
+    }
+    
+    func sumaSoloTarjetas() {
+        let tarjetas = sumarRegistrosPorTipo(tipo: .Tarjetas)
+        sumaTarjetas = tarjetas
+    }
     
 }
 

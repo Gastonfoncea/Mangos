@@ -13,11 +13,20 @@ struct CardMontoHome: View {
     var balance: Int
     @State var ingresos: Int = 0
     @State var egresos: Int = 0
-    
+    @State var animateGradient: Bool = false
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 12)
-                .foregroundStyle(Color.cardHome)
+                .foregroundStyle(.clear)
+                .background {
+                    LinearGradient(colors: [Color.violetColorG,Color.blueColorG], startPoint: .topLeading, endPoint: .bottomTrailing)
+                        .hueRotation(.degrees(animateGradient ? 30 : 0))
+                        .onAppear{
+                            withAnimation(.easeInOut(duration: 3).repeatForever(autoreverses: true)) {
+                                animateGradient.toggle()
+                            }
+                        }
+                }
             VStack{
                 VStack{
                     HStack{
@@ -31,7 +40,8 @@ struct CardMontoHome: View {
                         Text("$ \(balance)")
                             .font(.system(size: AppTheme.fontSizeMontoNumericoGrande))
                             .foregroundStyle(Color.blackWhite)
-                            .bold()
+                            .fontWeight(.bold)
+                            .fontDesign(.rounded)
                         Spacer()
                     }
                 }
@@ -62,15 +72,14 @@ struct CardMontoHome: View {
                     .padding(.trailing,30)
                 }
                 .padding(.horizontal,30)
-                .padding(.bottom,20)
+                .padding(.bottom,30)
 
             }
         }
+        .clipShape(RoundedRectangle(cornerRadius: 13))
         .frame(maxWidth: .infinity)
-        .frame(height: 180)
-        .shadow(radius: 5)
+        .frame(height: 220)
         .onAppear {
-            
             ingresos = vmRegistros.sumatoriaIngresos()
             egresos = vmRegistros.sumatoriaEgresos()
         }

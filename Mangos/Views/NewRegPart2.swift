@@ -114,10 +114,6 @@ struct NewRegPart2: View {
                         vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
                         vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
                         vmRegistros.sumaGastos = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
-                        vmRegistros.dimiss.toggle()
-                        dismiss()
-               
-                        
                     }
                  
                 }, label: {

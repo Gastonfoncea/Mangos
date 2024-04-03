@@ -12,7 +12,7 @@ class AppTheme: ObservableObject {
     
     static let shared = AppTheme()
     
-    static let fontSizeMontoNumericoGrande: CGFloat = 32
+    static let fontSizeMontoNumericoGrande: CGFloat = 40
     static let fontSizeListas: CGFloat = 18
     static let montosTarjeta: CGFloat = 16
     
@@ -25,7 +25,6 @@ class AppTheme: ObservableObject {
     }
     
 
-    
     func IconoString(tipo: String) -> String {
         switch tipo {
         case "Ingresos":

@@ -45,10 +45,6 @@ struct ListOfMovimientos: View {
             .scrollIndicators(.hidden)
        
         }
-        .onAppear{
-            vmRegistros.balance()
-            suma = vmRegistros.balanceTotal
-        }
         
     }
 }

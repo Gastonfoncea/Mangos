@@ -27,7 +27,7 @@ struct GastosView: View {
                         .padding(.top,3)
                         .bold()
                     
-                    Text("$ \(suma)")
+                    Text("$ \(vmRegistros.sumaGastos)")
                         .font(.largeTitle)
                         .bold()
                         .padding(.top)
@@ -56,10 +56,7 @@ struct GastosView: View {
             .scrollIndicators(.hidden)
 
         }
-        .onAppear{
-            suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
-            vmRegistros.balance()
-        }
+
     }
 }
 

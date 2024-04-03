@@ -27,7 +27,7 @@ struct TarjetasView: View {
                         .padding(.top,3)
                         .bold()
                     
-                    Text("$ \(suma)")
+                    Text("$ \(vmRegistros.sumaSoloTarjetas())")
                         .font(.largeTitle)
                         .bold()
                         .padding(.top)
@@ -56,12 +56,6 @@ struct TarjetasView: View {
             .scrollIndicators(.hidden)
 
         }
-        .onAppear{
-            suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Tarjetas)
-            vmRegistros.balance()
-        }
-
-
     }
 }
 

@@ -60,9 +60,9 @@ struct NewRegistroP1: View {
             
         }
         .navigationTitle("Ingresa el monto")
-        .onChange(of: vmRegistros.dimiss) {
-            dismiss()
-        }
+//        .onChange(of: vmRegistros.dimiss) {
+//            dismiss()
+//        }
     }
 }
 

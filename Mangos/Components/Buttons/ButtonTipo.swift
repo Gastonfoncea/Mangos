@@ -15,15 +15,15 @@ struct ButtonTipo: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius:8)
-                .foregroundStyle(appTheme.colorString(tipo: tipo).opacity(0.9))
+                .foregroundStyle(Color.accentColorInvertido)
             Text(tipo)
-                .foregroundStyle(Color.black)
+                .foregroundStyle(appTheme.colorString(tipo: tipo))
                 .font(.footnote)
-                .fontWeight(.semibold)
+                .fontWeight(.bold)
         }
         .frame(maxWidth: 95)
         .frame(height: 40)
-        .shadow(radius: 5)
+        
         
     }
 }

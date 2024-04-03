@@ -20,13 +20,13 @@ struct DolarCard: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 6)
-                .foregroundStyle(Color.whiteAccent)
+                .foregroundStyle(Color.accentColorInvertido)
             
             HStack{
-                VStack(alignment: .leading,spacing: 6){
+                VStack(alignment: .leading,spacing: 4){
                     //dolar blue
                     Text(tipoDolar.capitalized)
-                        .font(.system(size: 20))
+                        .font(.system(size: 22))
                         .bold()
                     Text("Spread $ \(montoVenta - montoCompra)")
                         .font(.system(size: 15))
@@ -39,42 +39,40 @@ struct DolarCard: View {
                 
                 HStack{
                     Spacer()
-                    VStack(alignment:.leading,spacing: 6){
+                    VStack(alignment:.leading,spacing: 17){
                         //compra
-                        Text("COMPRA")
+                        Text("Compra")
                             .font(.system(size: 18))
-                            .fontWeight(.regular)
+                            .fontWeight(.medium)
+                       
                         //venta
                         Text("$ \(montoCompra)")
-                            .font(.system(size: 18))
+                            .font(.system(size: 20))
                             .fontWeight(.semibold)
+                            .padding(.top,3)
                             
                     }
                     Spacer()
-                    VStack(alignment:.leading, spacing:6){
+                    VStack(alignment:.leading, spacing:17){
                         //monto Compra
-                        Text("VENTA")
+                        Text("Venta")
                             .font(.system(size: 18))
-                            .fontWeight(.regular)
+                            .fontWeight(.medium)
                         //monto venta
                         Text("$ \(montoVenta)")
-                            .font(.system(size: 18))
+                            .font(.system(size: 20))
                             .fontWeight(.semibold)
+                            .padding(.top,3)
                     }
                     Spacer()
                     
                 }
-                
-                
-                
             }
             .padding(.leading)
-            
-            
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 100)
-        .shadow(color: .black.opacity(0.1), radius: 8)
+        .frame(height: 90)
+       // .shadow(color: .black.opacity(0.1), radius: 8)
     }
 }
 
