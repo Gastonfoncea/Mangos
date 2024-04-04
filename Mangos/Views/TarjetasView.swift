@@ -37,7 +37,7 @@ struct TarjetasView: View {
                 .padding(.vertical, 16)
                 
                 ForEach(vmRegistros.fetchRegistrosPorTipo(tipo: .Tarjetas)) {item in
-                    ListViewItemCard(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, colorMonto: .red, fecha: item.fecha)
+                    ListViewItemCard(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, colorMonto: .red, categoria: item.categoria, fecha: item.fecha)
                 }
                 .onDelete { indexSet in
                     for index in indexSet{

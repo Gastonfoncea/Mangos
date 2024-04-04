@@ -22,12 +22,13 @@ struct LogoYNombrePorTipo: View {
                 Image(systemName: appTheme.IconoString(tipo: tipo))
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 25)
+                    .frame(width: 22)
                     .foregroundStyle(.white)
             }
             Text("\(tipo)")
                 .font(.footnote)
         }
+        .frame(width: 110,height: 110)
     }
 }
 

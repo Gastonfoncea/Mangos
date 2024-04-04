@@ -62,7 +62,7 @@ struct Home: View {
                         
                         List{
                             ForEach(vmRegistros.fetchRegistrosTotal()) {item in
-                                ListViewItem2(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, fecha: item.fecha)
+                                ListViewItem2(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, categoria: item.categoria, fecha: item.fecha)
                                     .listRowInsets(EdgeInsets(top: 12, leading: 20, bottom: 0, trailing: 20))
                             }
                             .listRowSeparator(.hidden)

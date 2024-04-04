@@ -79,23 +79,23 @@ class AppTheme: ObservableObject {
         case "Tarjetas":
             return .blueColorG
         case "Sueldo":
-            return .colorSueldo
+            return .greenColorG
         case "Comida":
-            return .colorComida
+            return .colorGastosComunes
         case "Gimnasio":
-            return .colorGimnasio
+            return .colorGastosComunes
         case "Cuidado Personal":
-            return .colorCuidadoP
+            return .colorGastosComunes
         case "Estudios":
             return .colorEstudios
         case "Ropa":
-            return .colorRopa
+            return .colorGastosComunes
         case "Salidas":
-            return .colorSalidas
+            return .colorEntretenimiento
         case "Restaurants":
-            return .colorRestaurants
+            return .colorEntretenimiento
         case "FastFood":
-            return .colorFastFood
+            return .colorEntretenimiento
         default:
             return .blueColorG
         }

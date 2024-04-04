@@ -39,7 +39,7 @@ struct IngresosView: View {
                     .padding(.vertical, 16)
                     
                     ForEach(vmRegistros.fetchRegistrosPorTipo(tipo: .Ingresos)) {item in
-                        ListViewItemCard(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, colorMonto: .green, fecha: item.fecha)
+                        ListViewItemCard(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, colorMonto: .green, categoria: item.categoria, fecha: item.fecha)
                     }
                     .onDelete { indexSet in
                         for index in indexSet{

@@ -15,19 +15,20 @@ struct ListViewItemCard: View {
     var tipo: String
     var monto:String
     var colorMonto: Color
+    var categoria: String
     var fecha: Date
     
     var body: some View {
         VStack{
             HStack{
-                LogoCirclePorTipo(tipo: tipo)
+                LogoCirclePorTipo(tipo: categoria)
                 VStack(alignment:.leading,spacing: 6){
                     Text(descripcion)
                         .font(.system(size: AppTheme.fontSizeListas))
                         .foregroundStyle(.fontColor1G)
                         .fontWeight(.medium)
                         .lineLimit(1)
-                    Text(tipo)
+                    Text("\(tipo) - \(categoria)")
                         .font(.footnote)
                         .foregroundStyle(Color.accentColor)
                         .opacity(0.7)
@@ -55,5 +56,5 @@ struct ListViewItemCard: View {
 }
 
 #Preview {
-    ListViewItemCard(descripcion: "Sueldo", tipo: "Ingresos", monto: "150.000", colorMonto: Color.green, fecha: Date.now)
+    ListViewItemCard(descripcion: "Sueldo", tipo: "Ingresos", monto: "150.000", colorMonto: Color.green, categoria: "Gimnasio", fecha: Date.now)
 }

@@ -36,7 +36,7 @@ struct CategorysViewSheet: View {
                         selectedCategory = index
                     } label: {
                         LogoYNombrePorTipo(tipo: index)
-                            .padding()
+                      
                     }
 
                 }
@@ -50,5 +50,5 @@ struct CategorysViewSheet: View {
 }
 
 //#Preview {
-//    CategorysViewSheet(vmCategory: CategoryModel(), categorias: ["Sueldo","Comida","Restaurant","Fastfood","Gimnasio","Restaurant"], selectedCategory: <#Binding<String?>#>)
+//    CategorysViewSheet(vmCategory: CategoryModel(), categorias: ["Sueldo","Comida","Gimnasio","Cuidado Personal", "Estudios", "Ropa", "Salidas", "Restaurants", "FastFood"])
 //}

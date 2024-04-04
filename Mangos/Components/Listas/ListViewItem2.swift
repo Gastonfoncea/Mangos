@@ -13,7 +13,8 @@ struct ListViewItem2: View {
     @StateObject var appTheme = AppTheme()
     var descripcion: String
     var tipo: String
-    var monto:String
+    var monto: String
+    var categoria: String
     var fecha: Date
     
     
@@ -23,8 +24,7 @@ struct ListViewItem2: View {
                 .foregroundStyle(.accentColorInvertido)
             
             HStack{
-                //Logo redondo
-                LogoCirclePorTipo(tipo: tipo)
+                LogoCirclePorTipo(tipo: categoria)
                
                 VStack(alignment: .leading,spacing: 1){
                     Text(descripcion)
@@ -32,7 +32,7 @@ struct ListViewItem2: View {
                         .foregroundStyle(.fontColor1G)
                         .lineLimit(1)
                     
-                    Text(tipo)
+                    Text("\(tipo) - \(categoria)")
                         .font(.footnote)
                         .foregroundStyle(.gray)
                         .lineLimit(1)
@@ -58,5 +58,5 @@ struct ListViewItem2: View {
 }
 
 #Preview {
-    ListViewItem2(descripcion: "Sueldo", tipo: "Ingresos", monto: "150.000", fecha: Date.now)
+    ListViewItem2(descripcion: "Sueldo", tipo: "Ingresos", monto: "150.000", categoria: "FastFood", fecha: Date.now)
 }

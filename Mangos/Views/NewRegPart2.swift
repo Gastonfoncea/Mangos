@@ -18,7 +18,6 @@ struct NewRegPart2: View {
     @State var referencia: String = ""
     @State var date: Date = .now
     @State var selected: String = "Sueldo"
-    @State var categoria: String = ""
     @State var validation = false
     @State private var isShowingCategories = false
     @State private var selectedCategory: String?
@@ -139,7 +138,7 @@ struct NewRegPart2: View {
                     if referencia.isEmpty {
                         validation = true
                     } else {
-                        vmRegistros.saveRegistro(tipo: tipo, monto: monto, detalle: referencia, categoria: categoria, fecha: date)
+                        vmRegistros.saveRegistro(tipo: tipo, monto: monto, detalle: referencia, categoria: selectedCategory ?? "", fecha: date)
                         vmRegistros.balance()
                         vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
                         vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
