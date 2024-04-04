@@ -10,8 +10,8 @@ import Foundation
 
 struct DolarModel: Codable,Hashable {
 
-    var compra: Int
-    var venta: Int
+    var compra: Decimal
+    var venta: Decimal
     var casa: String
     var nombre: String
     var moneda: String

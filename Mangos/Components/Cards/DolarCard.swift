@@ -14,8 +14,8 @@ struct DolarCard: View {
     var tipoDolar: String
     var spread: Int
     var actualizacion: String
-    var montoCompra: Int
-    var montoVenta: Int
+    var montoCompra: Decimal
+    var montoVenta: Decimal
     
     var body: some View {
         ZStack{
@@ -26,14 +26,14 @@ struct DolarCard: View {
                 VStack(alignment: .leading,spacing: 4){
                     //dolar blue
                     Text(tipoDolar.capitalized)
-                        .font(.system(size: 22))
+                        .font(.headline)
                         .bold()
                     Text("Spread $ \(montoVenta - montoCompra)")
-                        .font(.system(size: 15))
+                        .font(.footnote)
                         .foregroundStyle(Color.greenG)
                         
                     Text(genFunc.formatedDate(date: actualizacion))
-                        .font(.system(size: 13))
+                        .font(.footnote)
                 }
                 Spacer()
                 
@@ -42,27 +42,27 @@ struct DolarCard: View {
                     VStack(alignment:.leading,spacing: 17){
                         //compra
                         Text("Compra")
-                            .font(.system(size: 18))
+                            .font(.headline)
                             .fontWeight(.medium)
                        
                         //venta
                         Text("$ \(montoCompra)")
-                            .font(.system(size: 20))
+                            .font(.headline)
                             .fontWeight(.semibold)
-                            .padding(.top,3)
+                           // .padding(.top,3)
                             
                     }
                     Spacer()
                     VStack(alignment:.leading, spacing:17){
                         //monto Compra
                         Text("Venta")
-                            .font(.system(size: 18))
+                            .font(.headline)
                             .fontWeight(.medium)
                         //monto venta
                         Text("$ \(montoVenta)")
-                            .font(.system(size: 20))
+                            .font(.headline)
                             .fontWeight(.semibold)
-                            .padding(.top,3)
+                           // .padding(.top,3)
                     }
                     Spacer()
                     
@@ -71,8 +71,8 @@ struct DolarCard: View {
             .padding(.leading)
         }
         .frame(maxWidth: .infinity)
-        .frame(height: 90)
-       // .shadow(color: .black.opacity(0.1), radius: 8)
+        .frame(height: 85)
+
     }
 }
 

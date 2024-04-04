@@ -15,9 +15,11 @@ struct SideMenuRowView: View {
         HStack{
             Image(systemName: "dollarsign")
                 .imageScale(.small)
+                .foregroundStyle(Color.accentColor)
             
             Text("Dolares")
                 .font(.subheadline)
+                .foregroundStyle(Color.accentColor)
             
             Spacer()
         }
