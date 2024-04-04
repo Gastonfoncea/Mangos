@@ -155,7 +155,7 @@ struct NewRegPart2: View {
         .navigationTitle("Guardar Registro")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $isShowingCategories, content: {
-            CategorysViewSheet(vmCategory: vmCategory, categorias: vmCategory.mostFrequent, selectedCategory: $selectedCategory)
+            CategorysViewSheet(isShowingCategories: $isShowingCategories, vmCategory: vmCategory, categorias: vmCategory.mostFrequent, selectedCategory: $selectedCategory)
         })
         .ignoresSafeArea(.keyboard)
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CategorysViewSheet: View {
     
-    
+    @Binding var isShowingCategories: Bool
     @ObservedObject var vmCategory: CategoryModel
     var categorias: [String]
     @Binding var selectedCategory: String?
@@ -34,6 +34,7 @@ struct CategorysViewSheet: View {
                 ForEach(categorias, id: \.self) {index in
                     Button {
                         selectedCategory = index
+                       isShowingCategories = false
                     } label: {
                         LogoYNombrePorTipo(tipo: index)
                       
