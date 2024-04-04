@@ -12,20 +12,22 @@ struct TabBarView: View {
     //inicializamos el viewModel con StateObject para pasarlo desde aca
     @State var index = 0
     var body: some View {
-
-        TabView{
-            Home()
-                .tabItem {
-                    Label("Home", systemImage: "house")
-                }
-       
-                
+        VStack{
             
-            Profile()
-                .tabItem {
-                    Label("Perfil", systemImage: "person.fill")
-                }
         }
+//        TabView{
+//            Home()
+//                .tabItem {
+//                    Label("Home", systemImage: "house")
+//                }
+//       
+//                
+//            
+//            Profile()
+//                .tabItem {
+//                    Label("Perfil", systemImage: "person.fill")
+//                }
+//        }
     }
 }
 

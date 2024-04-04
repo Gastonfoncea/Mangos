@@ -12,13 +12,17 @@ struct NewRegPart2: View {
     @StateObject var vmFunctions = GeneralFunctions()
     @ObservedObject var vmRegistros: RegistrosViewModel
     @ObservedObject var vmNewR : ViewModelNewRegistro
+    @StateObject var vmCategory = CategoryModel()
     var tipo: String
     var monto: String
     @State var referencia: String = ""
     @State var date: Date = .now
     @State var selected: String = "Sueldo"
-    @Environment (\.dismiss) private var dismiss
+    @State var categoria: String = ""
     @State var validation = false
+    @State private var isShowingCategories = false
+    @State private var selectedCategory: String?
+    @Environment(\.presentationMode) var presentationMode
   
     
     var body: some View {
@@ -66,6 +70,34 @@ struct NewRegPart2: View {
                 
                 VStack{
                     HStack{
+                        Image(systemName: "archivebox")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 29)
+                        
+                        HStack{
+                            Button {
+                                isShowingCategories.toggle()
+                            } label: {
+                                Text(selectedCategory ?? "Selecciona una Categoria")
+                                LogoCirclePorTipo(tipo: selectedCategory ?? "")
+                                    .padding(.leading)
+                                    .opacity((selectedCategory != nil) ? 1 : 0)
+                                             }
+
+                            LogoWarning().opacity(validation ? 1 : 0)
+                                .padding(.trailing)
+                        }
+                        .padding(.leading,15)
+                        Spacer()
+                    }
+
+                }
+                .padding(.vertical)
+                Divider()
+                
+                VStack{
+                    HStack{
                         Image(systemName: "plus.app")
                             .resizable()
                             .scaledToFit()
@@ -74,8 +106,6 @@ struct NewRegPart2: View {
                         Text("\(tipo.dropLast())")
                             .fontWeight(.semibold)
                             .padding(.leading,15)
-                        LogoCirclePorTipo(tipo: tipo)
-                            .padding(.leading)
                         Spacer()
                     }
                 }
@@ -100,7 +130,7 @@ struct NewRegPart2: View {
                 
             }
             .padding(.leading,20)
-            .padding(.bottom,40)
+            .padding(.bottom,20)
     
             Spacer()
             
@@ -109,7 +139,7 @@ struct NewRegPart2: View {
                     if referencia.isEmpty {
                         validation = true
                     } else {
-                        vmRegistros.saveRegistro(tipo: tipo, monto: monto, detalle: referencia, fecha: date)
+                        vmRegistros.saveRegistro(tipo: tipo, monto: monto, detalle: referencia, categoria: categoria, fecha: date)
                         vmRegistros.balance()
                         vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
                         vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
@@ -120,9 +150,14 @@ struct NewRegPart2: View {
                     ButtonAceptar(name: "Aceptar")
                 })
             }
-            .padding(.bottom,100)
+            .padding(.bottom,80)
            
         }
+        .navigationTitle("Guardar Registro")
+        .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $isShowingCategories, content: {
+            CategorysViewSheet(vmCategory: vmCategory, categorias: vmCategory.mostFrequent, selectedCategory: $selectedCategory)
+        })
         .ignoresSafeArea(.keyboard)
     }
 }

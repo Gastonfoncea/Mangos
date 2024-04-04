@@ -12,7 +12,7 @@ struct Home: View {
     
     @Environment(\.modelContext) var modelContext
     @StateObject var appTheme = AppTheme()
-    @StateObject var vmRegistros = RegistrosViewModel()
+    @ObservedObject var vmRegistros: RegistrosViewModel
     @State private var showMenu = false
     
     var body: some View {
@@ -98,7 +98,8 @@ struct Home: View {
                     
                 }
             }
-            
+            .navigationTitle("")
+            .navigationBarTitleDisplayMode(.inline)
         }
         .onAppear{
             vmRegistros.balance()
@@ -111,5 +112,5 @@ struct Home: View {
 }
 
 #Preview {
-    Home()
+    Home(vmRegistros: RegistrosViewModel())
 }

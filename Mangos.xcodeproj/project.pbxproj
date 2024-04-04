@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		514924292BBDEA3C00896874 /* CategorysViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514924282BBDEA3C00896874 /* CategorysViewSheet.swift */; };
+		5149242B2BBDEC0700896874 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149242A2BBDEC0700896874 /* CategoryModel.swift */; };
+		5149242D2BBDFE7700896874 /* LogoYNombrePorTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149242C2BBDFE7700896874 /* LogoYNombrePorTipo.swift */; };
 		514EE20F2B9FF0AA007C644B /* ViewModelIngresos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE20E2B9FF0AA007C644B /* ViewModelIngresos.swift */; };
 		514EE2112B9FFD5A007C644B /* GeneralFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE2102B9FFD5A007C644B /* GeneralFunctions.swift */; };
 		514EE2132BA09153007C644B /* ListOfRegistros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514EE2122BA09153007C644B /* ListOfRegistros.swift */; };
@@ -61,6 +64,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		514924282BBDEA3C00896874 /* CategorysViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorysViewSheet.swift; sourceTree = "<group>"; };
+		5149242A2BBDEC0700896874 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		5149242C2BBDFE7700896874 /* LogoYNombrePorTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoYNombrePorTipo.swift; sourceTree = "<group>"; };
 		514EE20E2B9FF0AA007C644B /* ViewModelIngresos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelIngresos.swift; sourceTree = "<group>"; };
 		514EE2102B9FFD5A007C644B /* GeneralFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralFunctions.swift; sourceTree = "<group>"; };
 		514EE2122BA09153007C644B /* ListOfRegistros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRegistros.swift; sourceTree = "<group>"; };
@@ -181,6 +187,7 @@
 				519ABFE32B9D66C2007B919E /* TabBarCustom.swift */,
 				51B28AAC2BAF81B300667F14 /* LogoWarning.swift */,
 				5152AEC62BBB005300F572D7 /* LogoCirclePorTipoGrande.swift */,
+				5149242C2BBDFE7700896874 /* LogoYNombrePorTipo.swift */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -242,6 +249,7 @@
 				514EE2122BA09153007C644B /* ListOfRegistros.swift */,
 				514EE2162BA0E461007C644B /* NewRegistroP1.swift */,
 				519ABFED2B9D8061007B919E /* NewRegPart2.swift */,
+				514924282BBDEA3C00896874 /* CategorysViewSheet.swift */,
 				519ABFDB2B9D5571007B919E /* ListOfMovimientos.swift */,
 				51D4F0282BA794B0008259E3 /* IngresosView.swift */,
 				51D4F02A2BA7B01F008259E3 /* GastosView.swift */,
@@ -260,6 +268,7 @@
 				519ABFDD2B9D561C007B919E /* AppTheme.swift */,
 				514EE2142BA093BF007C644B /* RegistrosList.swift */,
 				515C88152BB5F2CE007A8BCD /* DolarModel.swift */,
+				5149242A2BBDEC0700896874 /* CategoryModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -362,6 +371,7 @@
 				519ABFE02B9D61AD007B919E /* PlusButton.swift in Sources */,
 				51870EAD2BB78E7600FDD7CA /* ButtonCuadrado.swift in Sources */,
 				519ABFC82B9D2434007B919E /* CircleVerMas.swift in Sources */,
+				5149242B2BBDEC0700896874 /* CategoryModel.swift in Sources */,
 				514EE2132BA09153007C644B /* ListOfRegistros.swift in Sources */,
 				51D4F0292BA794B0008259E3 /* IngresosView.swift in Sources */,
 				5152AEC52BBAF87A00F572D7 /* ListViewItem2.swift in Sources */,
@@ -374,12 +384,14 @@
 				51B28AAD2BAF81B300667F14 /* LogoWarning.swift in Sources */,
 				5152AEC72BBB005300F572D7 /* LogoCirclePorTipoGrande.swift in Sources */,
 				519ABFD82B9D3334007B919E /* Profile.swift in Sources */,
+				5149242D2BBDFE7700896874 /* LogoYNombrePorTipo.swift in Sources */,
 				515C88182BB5F3B6007A8BCD /* NetworkManager.swift in Sources */,
 				519ABFE62B9D71FC007B919E /* PlusButton2.swift in Sources */,
 				519ABFE82B9D7970007B919E /* ButtonAceptar.swift in Sources */,
 				514EE21E2BA2974E007C644B /* LogoCirclePorTipo.swift in Sources */,
 				519ABFB42B9BD0AD007B919E /* Home.swift in Sources */,
 				515C881C2BB5F50D007A8BCD /* NetworkErrors.swift in Sources */,
+				514924292BBDEA3C00896874 /* CategorysViewSheet.swift in Sources */,
 				51EF66DB2BB661A2006DB89F /* DolarCard.swift in Sources */,
 				514EE2112B9FFD5A007C644B /* GeneralFunctions.swift in Sources */,
 				514EE2172BA0E461007C644B /* NewRegistroP1.swift in Sources */,

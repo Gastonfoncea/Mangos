@@ -10,9 +10,20 @@ import SwiftData
 
 @main
 struct MangosApp: App {
+    
+    @StateObject var vmRegistros = RegistrosViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            Home()
+            Home(vmRegistros: vmRegistros)
+                .onAppear{
+                    vmRegistros.balance()
+                    vmRegistros.sumaSoloIngresos()
+                    vmRegistros.sumaSoloGastos()
+                    vmRegistros.sumaSoloAhorros()
+                    vmRegistros.sumaSoloTarjetas()
+                }
         }
+        
     }
 }

@@ -27,7 +27,7 @@ struct TarjetasView: View {
                         .padding(.top,3)
                         .bold()
                     
-                    Text("$ \(vmRegistros.sumaSoloTarjetas())")
+                    Text("$ \(vmRegistros.sumaTarjetas)")
                         .font(.largeTitle)
                         .bold()
                         .padding(.top)
@@ -54,7 +54,6 @@ struct TarjetasView: View {
             }
             .listStyle(.plain)
             .scrollIndicators(.hidden)
-
         }
     }
 }

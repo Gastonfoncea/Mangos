@@ -22,6 +22,16 @@ class AppTheme: ObservableObject {
         case gastos
         case ahorros
         case tarjeta
+        case sueldo
+        case comida
+        case gimnasio
+        case cuidadoP
+        case estudios
+        case ropa
+        case salidas
+        case restaurants
+        case fastfood
+        
     }
     
 
@@ -35,6 +45,24 @@ class AppTheme: ObservableObject {
             return "handbag.fill"
         case "Tarjetas":
             return "creditcard.fill"
+        case "Sueldo":
+            return "dock.arrow.down.rectangle"
+        case "Comida":
+            return "takeoutbag.and.cup.and.straw.fill"
+        case "Gimnasio":
+            return "dumbbell.fill"
+        case "Cuidado Personal":
+            return "hand.thumbsup.fill"
+        case "Estudios":
+            return "text.book.closed.fill"
+        case "Ropa":
+            return "hanger"
+        case "Salidas":
+            return "popcorn.fill"
+        case "Restaurants":
+            return "fork.knife"
+        case "FastFood":
+            return "takeoutbag.and.cup.and.straw.fill"
         default:
             return "house"
         }
@@ -50,9 +78,28 @@ class AppTheme: ObservableObject {
             return .violetColorG
         case "Tarjetas":
             return .blueColorG
+        case "Sueldo":
+            return .colorSueldo
+        case "Comida":
+            return .colorComida
+        case "Gimnasio":
+            return .colorGimnasio
+        case "Cuidado Personal":
+            return .colorCuidadoP
+        case "Estudios":
+            return .colorEstudios
+        case "Ropa":
+            return .colorRopa
+        case "Salidas":
+            return .colorSalidas
+        case "Restaurants":
+            return .colorRestaurants
+        case "FastFood":
+            return .colorFastFood
         default:
             return .blueColorG
         }
+        
     }
  
     

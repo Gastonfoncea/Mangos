@@ -58,8 +58,8 @@ class RegistrosViewModel: ObservableObject {
     
     //MARK: CRUD - Create - Read - Update - Delete
     
-    func saveRegistro(tipo: String, monto: String, detalle: String, fecha: Date) {
-        let registroSwiftData = RegistrosModel(tipo: tipo, monto: monto, detalle: detalle, fecha: fecha)
+    func saveRegistro(tipo: String, monto: String, detalle: String,categoria: String, fecha: Date) {
+        let registroSwiftData = RegistrosModel(tipo: tipo, monto: monto, detalle: detalle, categoria: categoria, fecha: fecha)
         modelContext.insert(registroSwiftData)
         print("El registro se guardo correctamente")
     }
