@@ -47,13 +47,12 @@ struct NewRegPart2: View {
                         Image(systemName: "pencil.and.scribble")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 38)
-                        
+                            .frame(width: 36, height: 36)
                         HStack{
                             TextField("Agrega una descripcion", text: $referencia)
                                 .bold()
                                 .padding(.leading,5)
-                                .submitLabel(.done)
+                                .submitLabel(.done) // palabra que se muestra en el keyboard
                                 .onChange(of:referencia){
                                     validation = false
                                 }
@@ -72,16 +71,18 @@ struct NewRegPart2: View {
                         Image(systemName: "archivebox")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 29)
+                            .frame(width: 29,height: 29)
                         
                         HStack{
                             Button {
                                 isShowingCategories.toggle()
                             } label: {
-                                Text(selectedCategory ?? "Selecciona una Categoria")
+                                Text(selectedCategory ?? "Seleccionar categoria")
+                                    .bold()
                                 LogoCirclePorTipo(tipo: selectedCategory ?? "")
                                     .padding(.leading)
                                     .opacity((selectedCategory != nil) ? 1 : 0)
+                                    
                                              }
 
                             LogoWarning().opacity(validation ? 1 : 0)
@@ -100,7 +101,7 @@ struct NewRegPart2: View {
                         Image(systemName: "plus.app")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 29)
+                            .frame(width: 29,height: 29)
                         
                         Text("\(tipo.dropLast())")
                             .fontWeight(.semibold)
@@ -116,7 +117,7 @@ struct NewRegPart2: View {
                         Image(systemName: "calendar")
                             .resizable()
                             .scaledToFit()
-                            .frame(width: 30)
+                            .frame(width: 30,height: 30)
                         DatePicker("", selection: $date,displayedComponents: .date)
                             .datePickerStyle(.automatic)
                             .fixedSize()
