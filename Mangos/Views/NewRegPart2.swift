@@ -19,6 +19,7 @@ struct NewRegPart2: View {
     @State var date: Date = .now
     @State var selected: String = "Sueldo"
     @State var validation = false
+    @State var validationCat = false
     @State private var isShowingCategories = false
     @State private var selectedCategory: String?
     @Environment(\.presentationMode) var presentationMode
@@ -57,7 +58,8 @@ struct NewRegPart2: View {
                                     validation = false
                                 }
                             LogoWarning().opacity(validation ? 1 : 0)
-                                .padding(.trailing)
+                                //.padding(.trailing)
+                            
                         }
                         Spacer()
                     }
@@ -82,11 +84,13 @@ struct NewRegPart2: View {
                                 LogoCirclePorTipo(tipo: selectedCategory ?? "")
                                     .padding(.leading)
                                     .opacity((selectedCategory != nil) ? 1 : 0)
-                                    
+                                    .padding(.trailing,40)
                                              }
-
-                            LogoWarning().opacity(validation ? 1 : 0)
-                                .padding(.trailing)
+                            LogoWarning()
+                                .opacity(validationCat ? 1 : 0)
+                                .opacity((selectedCategory != nil) ? 0 : 1)
+                             
+                                
                         }
                         .padding(.leading,15)
                         Spacer()
@@ -138,7 +142,9 @@ struct NewRegPart2: View {
                 Button(action: {
                     if referencia.isEmpty {
                         validation = true
-                    } else {
+                    } else if selectedCategory == nil {
+                        validationCat = true
+                    } else if !referencia.isEmpty && selectedCategory != nil {
                         vmRegistros.saveRegistro(tipo: tipo, monto: monto, detalle: referencia, categoria: selectedCategory ?? "", fecha: date)
                         vmRegistros.balance()
                         vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)

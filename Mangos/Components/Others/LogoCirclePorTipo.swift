@@ -16,7 +16,7 @@ struct LogoCirclePorTipo: View {
         ZStack{
             Circle()
                 .foregroundStyle(appTheme.colorString(tipo: tipo))
-                .frame(width: 38)
+                .frame(width: 38,height: 38)
             Image(systemName: appTheme.IconoString(tipo: tipo))
                 .resizable()
                 .scaledToFit()
