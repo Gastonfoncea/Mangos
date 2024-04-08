@@ -22,13 +22,14 @@ struct SideMenuView: View {
                     HStack {
                         VStack(alignment:.leading ,spacing: 32) {
                             SideMenuHeaderView()
-                            
                             VStack{
                                 NavigationLink(destination:DolarView()) {
-                                   SideMenuRowView()
-                                   // Text("ir a los dolares")
+                                    SideMenuRowView(icono: Iconos.dolar.rawValue, text: "Precio Dolar Hoy")
                                 }
                                 
+                                NavigationLink(destination:Profile()) {
+                                    SideMenuRowView(icono: Iconos.profile.rawValue, text: "Perfil")
+                                }
                             }
                             
                             Spacer()

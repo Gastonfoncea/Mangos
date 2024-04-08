@@ -9,4 +9,5 @@ import Foundation
 
 enum Iconos: String {
     case dolar = "dollarsign"
+    case profile = "person.fill"
 }
