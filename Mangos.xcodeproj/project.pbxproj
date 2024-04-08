@@ -56,6 +56,7 @@
 		51B28AAD2BAF81B300667F14 /* LogoWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28AAC2BAF81B300667F14 /* LogoWarning.swift */; };
 		51B28AAF2BAF842100667F14 /* TarjetasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28AAE2BAF842100667F14 /* TarjetasView.swift */; };
 		51BBA6542BAF97F000E2D960 /* ViewModelNewRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */; };
+		51C09EDF2BC3747200123BA0 /* EnumIconos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C09EDE2BC3747200123BA0 /* EnumIconos.swift */; };
 		51D39D512BB6097F00246820 /* DolarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D39D502BB6097F00246820 /* DolarViewModel.swift */; };
 		51D4F0292BA794B0008259E3 /* IngresosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F0282BA794B0008259E3 /* IngresosView.swift */; };
 		51D4F02B2BA7B01F008259E3 /* GastosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F02A2BA7B01F008259E3 /* GastosView.swift */; };
@@ -114,6 +115,7 @@
 		51B28AAC2BAF81B300667F14 /* LogoWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoWarning.swift; sourceTree = "<group>"; };
 		51B28AAE2BAF842100667F14 /* TarjetasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetasView.swift; sourceTree = "<group>"; };
 		51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewRegistro.swift; sourceTree = "<group>"; };
+		51C09EDE2BC3747200123BA0 /* EnumIconos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIconos.swift; sourceTree = "<group>"; };
 		51D39D502BB6097F00246820 /* DolarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarViewModel.swift; sourceTree = "<group>"; };
 		51D4F0282BA794B0008259E3 /* IngresosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngresosView.swift; sourceTree = "<group>"; };
 		51D4F02A2BA7B01F008259E3 /* GastosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosView.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			children = (
 				519ABFB12B9BD0AD007B919E /* MangosApp.swift */,
 				519ABFB52B9BD0AF007B919E /* Assets.xcassets */,
+				51C09EDD2BC3745700123BA0 /* Enums */,
 				515C88142BB5F2BD007A8BCD /* Managers */,
 				519ABFB72B9BD0AF007B919E /* Preview Content */,
 				519ABFC12B9CC23D007B919E /* ViewModels */,
@@ -295,6 +298,14 @@
 				514EE24C2BA54423007C644B /* Others */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		51C09EDD2BC3745700123BA0 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				51C09EDE2BC3747200123BA0 /* EnumIconos.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +407,7 @@
 				514EE2112B9FFD5A007C644B /* GeneralFunctions.swift in Sources */,
 				514EE2172BA0E461007C644B /* NewRegistroP1.swift in Sources */,
 				515C88162BB5F2CE007A8BCD /* DolarModel.swift in Sources */,
+				51C09EDF2BC3747200123BA0 /* EnumIconos.swift in Sources */,
 				51D39D512BB6097F00246820 /* DolarViewModel.swift in Sources */,
 				514EE2152BA093BF007C644B /* RegistrosList.swift in Sources */,
 				515C881A2BB5F413007A8BCD /* DolarView.swift in Sources */,

@@ -63,6 +63,8 @@ class AppTheme: ObservableObject {
             return "fork.knife"
         case "FastFood":
             return "takeoutbag.and.cup.and.straw.fill"
+        case "Dolares":
+            return "dollarsign"
         default:
             return "house"
         }
@@ -96,6 +98,8 @@ class AppTheme: ObservableObject {
             return .colorEntretenimiento
         case "FastFood":
             return .colorEntretenimiento
+        case "Dolares":
+            return .accentColorInvertido
         default:
             return .blueColorG
         }

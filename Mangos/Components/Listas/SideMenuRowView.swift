@@ -9,27 +9,26 @@ import SwiftUI
 
 struct SideMenuRowView: View {
      
-   // @State var isSelected: Bool = false
     
     var body: some View {
         HStack{
             Image(systemName: "dollarsign")
-                .imageScale(.small)
+                .font(.title3)
+                .fontWeight(.semibold)
                 .foregroundStyle(Color.accentColor)
             
             Text("Precio Dolar HOY")
-                .font(.headline)
+                .font(.title3)
+                .fontWeight(.semibold)
                 .foregroundStyle(Color.accentColor)
             
             Spacer()
         }
-        .padding(.leading)
+       // .padding(.leading)
         .frame(width: 216, height: 44)
-        //.background(isSelected ? Color.accentColor.opacity(0.15) : .clear)
+  
         .clipShape(RoundedRectangle(cornerRadius: 10))
-//        .onTapGesture {
-//           isSelected = true
-//        }
+
         
     }
 }
