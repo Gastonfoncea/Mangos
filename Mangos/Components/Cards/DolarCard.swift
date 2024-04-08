@@ -19,7 +19,7 @@ struct DolarCard: View {
     
     var body: some View {
         ZStack{
-            RoundedRectangle(cornerRadius: 6)
+            RoundedRectangle(cornerRadius: 15)
                 .foregroundStyle(Color.accentColorInvertido)
             
             HStack{
@@ -30,7 +30,7 @@ struct DolarCard: View {
                         .bold()
                     Text("Spread $ \(montoVenta - montoCompra)")
                         .font(.footnote)
-                        .foregroundStyle(Color.greenG)
+                        .foregroundStyle(Color.greenColorG)
                         
                     Text(genFunc.formatedDate(date: actualizacion))
                         .font(.footnote)
@@ -54,15 +54,15 @@ struct DolarCard: View {
                     }
                     Spacer()
                     VStack(alignment:.leading, spacing:17){
-                        //monto Compra
+                  
                         Text("Venta")
                             .font(.headline)
                             .fontWeight(.medium)
-                        //monto venta
+                 
                         Text("$ \(montoVenta)")
                             .font(.headline)
                             .fontWeight(.semibold)
-                           // .padding(.top,3)
+                         
                     }
                     Spacer()
                     
