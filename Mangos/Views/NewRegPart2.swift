@@ -81,7 +81,7 @@ struct NewRegPart2: View {
                             } label: {
                                 Text(selectedCategory ?? "Seleccionar categoria")
                                     .bold()
-                                    LogoCirclePorTipo(tipo: selectedCategory ?? "")
+                                LogoCirclePorTipo(tipo: selectedCategory ?? "")
                                     .padding(.leading)
                                     .opacity((selectedCategory != nil) ? 1 : 0)
                                     .padding(.trailing,40)
@@ -102,7 +102,7 @@ struct NewRegPart2: View {
                 
                 VStack{
                     HStack{
-                        Image(systemName: "plus.app")
+                        Image(systemName: Iconos.plus.rawValue)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 29,height: 29)
@@ -118,7 +118,7 @@ struct NewRegPart2: View {
                 
                 VStack{
                     HStack{
-                        Image(systemName: "calendar")
+                        Image(systemName: Iconos.calendar.rawValue)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 30,height: 30)

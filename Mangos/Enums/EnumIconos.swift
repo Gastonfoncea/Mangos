@@ -22,6 +22,8 @@ enum Iconos: String {
     case restaurants = "fork.knife"
     case caja = "archivebox"
     case pencil = "pencil.and.scribble"
+    case calendar = "calendar"
+    case plus = "plus.app"
 }
 
 /*
