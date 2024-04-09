@@ -57,6 +57,7 @@
 		51B28AAF2BAF842100667F14 /* TarjetasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28AAE2BAF842100667F14 /* TarjetasView.swift */; };
 		51BBA6542BAF97F000E2D960 /* ViewModelNewRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */; };
 		51C09EDF2BC3747200123BA0 /* EnumIconos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C09EDE2BC3747200123BA0 /* EnumIconos.swift */; };
+		51C09F1B2BC4BEA900123BA0 /* EnumCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */; };
 		51D39D512BB6097F00246820 /* DolarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D39D502BB6097F00246820 /* DolarViewModel.swift */; };
 		51D4F0292BA794B0008259E3 /* IngresosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F0282BA794B0008259E3 /* IngresosView.swift */; };
 		51D4F02B2BA7B01F008259E3 /* GastosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F02A2BA7B01F008259E3 /* GastosView.swift */; };
@@ -116,6 +117,7 @@
 		51B28AAE2BAF842100667F14 /* TarjetasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetasView.swift; sourceTree = "<group>"; };
 		51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewRegistro.swift; sourceTree = "<group>"; };
 		51C09EDE2BC3747200123BA0 /* EnumIconos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIconos.swift; sourceTree = "<group>"; };
+		51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCategorias.swift; sourceTree = "<group>"; };
 		51D39D502BB6097F00246820 /* DolarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarViewModel.swift; sourceTree = "<group>"; };
 		51D4F0282BA794B0008259E3 /* IngresosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngresosView.swift; sourceTree = "<group>"; };
 		51D4F02A2BA7B01F008259E3 /* GastosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosView.swift; sourceTree = "<group>"; };
@@ -304,6 +306,7 @@
 			isa = PBXGroup;
 			children = (
 				51C09EDE2BC3747200123BA0 /* EnumIconos.swift */,
+				51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */,
 			);
 			path = Enums;
 			sourceTree = "<group>";
@@ -420,6 +423,7 @@
 				519ABFB22B9BD0AD007B919E /* MangosApp.swift in Sources */,
 				514EE24E2BA54463007C644B /* ListViewItemCard.swift in Sources */,
 				519ABFEA2B9D7A18007B919E /* TextfieldGeneral.swift in Sources */,
+				51C09F1B2BC4BEA900123BA0 /* EnumCategorias.swift in Sources */,
 				519ABFCE2B9D2A11007B919E /* InfoNameCard.swift in Sources */,
 				519ABFE42B9D66C2007B919E /* TabBarCustom.swift in Sources */,
 				519ABFDE2B9D561C007B919E /* AppTheme.swift in Sources */,

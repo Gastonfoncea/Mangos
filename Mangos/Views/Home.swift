@@ -25,16 +25,16 @@ struct Home: View {
                     .padding(.horizontal,20)
                     HStack(spacing:10){
                         NavigationLink(destination:IngresosView(vmRegistros: vmRegistros)){
-                            ButtonTipo(tipo: "Ingresos")
+                            ButtonTipo(tipo: Categorias.ingresos.rawValue)
                         }
                         NavigationLink(destination:GastosView(vmRegistros: vmRegistros)){
-                            ButtonTipo(tipo: "Gastos")
+                            ButtonTipo(tipo: Categorias.gastos.rawValue)
                         }
                         NavigationLink(destination:AhorrosView(vmRegistros: vmRegistros)){
-                            ButtonTipo(tipo: "Ahorros")
+                            ButtonTipo(tipo: Categorias.ahorros.rawValue)
                         }
                         NavigationLink(destination:TarjetasView(vmRegistros: vmRegistros)){
-                            ButtonTipo(tipo: "Tarjetas")
+                            ButtonTipo(tipo: Categorias.tarjetas.rawValue)
                         }
                     }
                     .frame(maxWidth: .infinity)

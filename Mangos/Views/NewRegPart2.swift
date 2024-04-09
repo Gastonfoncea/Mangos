@@ -45,7 +45,7 @@ struct NewRegPart2: View {
                 Divider()
                 VStack{
                     HStack{
-                        Image(systemName: "pencil.and.scribble")
+                        Image(systemName: Iconos.pencil.rawValue)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 36, height: 36)
@@ -70,7 +70,7 @@ struct NewRegPart2: View {
                 
                 VStack{
                     HStack{
-                        Image(systemName: "archivebox")
+                        Image(systemName: Iconos.caja.rawValue)
                             .resizable()
                             .scaledToFit()
                             .frame(width: 29,height: 29)
@@ -81,7 +81,7 @@ struct NewRegPart2: View {
                             } label: {
                                 Text(selectedCategory ?? "Seleccionar categoria")
                                     .bold()
-                                LogoCirclePorTipo(tipo: selectedCategory ?? "")
+                                    LogoCirclePorTipo(tipo: selectedCategory ?? "")
                                     .padding(.leading)
                                     .opacity((selectedCategory != nil) ? 1 : 0)
                                     .padding(.trailing,40)

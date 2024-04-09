@@ -20,6 +20,8 @@ enum Iconos: String {
     case ropa = "hanger"
     case salidas = "popcorn.fill"
     case restaurants = "fork.knife"
+    case caja = "archivebox"
+    case pencil = "pencil.and.scribble"
 }
 
 /*

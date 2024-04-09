@@ -11,7 +11,6 @@ struct LogoCirclePorTipo: View {
     
     @StateObject var appTheme = AppTheme()
     var tipo: String
-    
     var body: some View {
         ZStack{
             Circle()

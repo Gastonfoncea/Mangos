@@ -13,7 +13,6 @@ struct LogoYNombrePorTipo: View {
     var tipo: String
     
     var body: some View {
-        
         VStack {
             ZStack{
                 Circle()
