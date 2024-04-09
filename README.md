@@ -2,8 +2,9 @@
 * ⚡  SwiftData
 * 🎨 SwiftUI
 * 💿  MVVM
+* URLSESSION
 
-APP for tracking Expenses
+APP for tracking Expenses - And for view the price of DOLAR money in Argentina
 
 
 ### Some ScreenShots
