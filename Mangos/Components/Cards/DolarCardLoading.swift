@@ -18,6 +18,7 @@ struct DolarCardLoading: View {
                 .frame(height: 85)
                 .cornerRadius(15)
             
+            
             Color.white
                 .frame(height: 85)
                 .cornerRadius(15)
@@ -25,17 +26,18 @@ struct DolarCardLoading: View {
                     Rectangle()
                         .fill(
                         
-                            LinearGradient(gradient: .init(colors: [.clear,Color.white.opacity(0.48),.clear]), startPoint: .top, endPoint: .bottom)
+                            LinearGradient(gradient: .init(colors: [.clear,Color.white.opacity(0.25),.clear]), startPoint: .top, endPoint: .bottom)
                         )
                         .rotationEffect(.init(degrees: 70))
                         .offset(x: self.show ? center : -center)
                 )
+                
         }
         .foregroundStyle(.accentColorInvertido)
         .frame(maxWidth: .infinity)
         .frame(height: 85)
         .onAppear{
-            withAnimation(Animation.default.speed(0.3).delay(0)
+            withAnimation(Animation.linear.speed(0.25).delay(0)
                 .repeatForever(autoreverses: false)){
                     self.show.toggle()
                 }

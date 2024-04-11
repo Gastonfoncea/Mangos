@@ -36,7 +36,7 @@ struct DolarView: View {
 //            if let dolarTarjeta = vmDolar.dolarDataTarjeta {
 //                DolarCard(tipoDolar: dolarTarjeta.casa, spread: 20, actualizacion: dolarTarjeta.fechaActualizacion, montoCompra: dolarTarjeta.compra, montoVenta: dolarTarjeta.venta)
 //            } else {
-//                ProgressView()
+//               DolarCardLoading()
 //            }
             
             Spacer()
