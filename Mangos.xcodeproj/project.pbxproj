@@ -59,6 +59,7 @@
 		51C09EDF2BC3747200123BA0 /* EnumIconos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C09EDE2BC3747200123BA0 /* EnumIconos.swift */; };
 		51C09F1B2BC4BEA900123BA0 /* EnumCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */; };
 		51D39D512BB6097F00246820 /* DolarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D39D502BB6097F00246820 /* DolarViewModel.swift */; };
+		51D449712BC7801C00DA5AA3 /* DolarCardLoading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D449702BC7801C00DA5AA3 /* DolarCardLoading.swift */; };
 		51D4F0292BA794B0008259E3 /* IngresosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F0282BA794B0008259E3 /* IngresosView.swift */; };
 		51D4F02B2BA7B01F008259E3 /* GastosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D4F02A2BA7B01F008259E3 /* GastosView.swift */; };
 		51ED8A342BA91C940079AF36 /* AhorrosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51ED8A332BA91C940079AF36 /* AhorrosView.swift */; };
@@ -119,6 +120,7 @@
 		51C09EDE2BC3747200123BA0 /* EnumIconos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIconos.swift; sourceTree = "<group>"; };
 		51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCategorias.swift; sourceTree = "<group>"; };
 		51D39D502BB6097F00246820 /* DolarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarViewModel.swift; sourceTree = "<group>"; };
+		51D449702BC7801C00DA5AA3 /* DolarCardLoading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarCardLoading.swift; sourceTree = "<group>"; };
 		51D4F0282BA794B0008259E3 /* IngresosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngresosView.swift; sourceTree = "<group>"; };
 		51D4F02A2BA7B01F008259E3 /* GastosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GastosView.swift; sourceTree = "<group>"; };
 		51ED8A332BA91C940079AF36 /* AhorrosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AhorrosView.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				519ABFD92B9D54FE007B919E /* TopCardContainerHome.swift */,
 				519ABFCD2B9D2A11007B919E /* InfoNameCard.swift */,
 				51EF66DA2BB661A2006DB89F /* DolarCard.swift */,
+				51D449702BC7801C00DA5AA3 /* DolarCardLoading.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				514EE21E2BA2974E007C644B /* LogoCirclePorTipo.swift in Sources */,
 				519ABFB42B9BD0AD007B919E /* Home.swift in Sources */,
 				515C881C2BB5F50D007A8BCD /* NetworkErrors.swift in Sources */,
+				51D449712BC7801C00DA5AA3 /* DolarCardLoading.swift in Sources */,
 				514924292BBDEA3C00896874 /* CategorysViewSheet.swift in Sources */,
 				51EF66DB2BB661A2006DB89F /* DolarCard.swift in Sources */,
 				514EE2112B9FFD5A007C644B /* GeneralFunctions.swift in Sources */,

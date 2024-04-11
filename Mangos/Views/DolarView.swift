@@ -24,13 +24,13 @@ struct DolarView: View {
             if let dolardata = vmDolar.dolarDataBlue {
                 DolarCard(tipoDolar: dolardata.casa, spread: 20, actualizacion: dolardata.fechaActualizacion, montoCompra: dolardata.compra, montoVenta: dolardata.venta)
                 } else {
-                    ProgressView()
+                    DolarCardLoading()
             }
             
             if let dolarOficial = vmDolar.dolarDataOficial {
                 DolarCard(tipoDolar: dolarOficial.casa, spread: 20, actualizacion: dolarOficial.fechaActualizacion, montoCompra: dolarOficial.compra, montoVenta: dolarOficial.venta)
             } else {
-                ProgressView()
+                DolarCardLoading()
             }
             
 //            if let dolarTarjeta = vmDolar.dolarDataTarjeta {
