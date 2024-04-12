@@ -15,7 +15,7 @@ struct SideMenuView: View {
             ZStack{
                 if isShowing {
                     Rectangle()
-                        .foregroundStyle(.colorMenu.opacity(0.3))
+                        .foregroundStyle(.colorMenu.opacity(0.65))
                         .ignoresSafeArea()
                         .onTapGesture { isShowing.toggle() }
                     
