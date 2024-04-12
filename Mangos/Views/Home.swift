@@ -16,6 +16,7 @@ struct Home: View {
     @State private var showMenu = false
     
     var body: some View {
+        
         NavigationStack{
             ZStack {
                 VStack{
