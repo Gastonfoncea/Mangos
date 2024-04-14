@@ -20,24 +20,26 @@ struct DolarView: View {
                 Spacer()
             }
            
-                
-            if let dolardata = vmDolar.dolarDataBlue {
+            //Manejo de casos de error para tarjeta Dolar Blue
+            if vmDolar.isLoading {
+                DolarCardLoading()
+            } else if vmDolar.error != nil {
+                ContentUnavailableView("Error en la red", systemImage: "network.slash")
+            } else if let dolardata = vmDolar.dolarDataBlue {
                 DolarCard(tipoDolar: dolardata.casa, spread: 20, actualizacion: dolardata.fechaActualizacion, montoCompra: dolardata.compra, montoVenta: dolardata.venta)
                 } else {
-                    DolarCardLoading()
+                    Text("error inesperado")
             }
             
-            if let dolarOficial = vmDolar.dolarDataOficial {
+            //Dolar Oficial
+            if vmDolar.isLoading {
+                DolarCardLoading()
+            } else if let dolarOficial = vmDolar.dolarDataOficial {
                 DolarCard(tipoDolar: dolarOficial.casa, spread: 20, actualizacion: dolarOficial.fechaActualizacion, montoCompra: dolarOficial.compra, montoVenta: dolarOficial.venta)
             } else {
-                DolarCardLoading()
+               Text("error inesperado")
             }
-            
-//            if let dolarTarjeta = vmDolar.dolarDataTarjeta {
-//                DolarCard(tipoDolar: dolarTarjeta.casa, spread: 20, actualizacion: dolarTarjeta.fechaActualizacion, montoCompra: dolarTarjeta.compra, montoVenta: dolarTarjeta.venta)
-//            } else {
-//               DolarCardLoading()
-//            }
+
             
             Spacer()
         }
