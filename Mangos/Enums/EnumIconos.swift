@@ -24,6 +24,7 @@ enum Iconos: String {
     case pencil = "pencil.and.scribble"
     case calendar = "calendar"
     case plus = "plus.app"
+    case historial = "book.pages.fill"
 }
 
 /*

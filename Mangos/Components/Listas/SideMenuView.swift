@@ -27,6 +27,9 @@ struct SideMenuView: View {
                                     SideMenuRowView(icono: Iconos.dolar.rawValue, text: "Precio Dolar Hoy")
                                 }
                                 
+                                NavigationLink(destination:HistorialMeses()) {
+                                    SideMenuRowView(icono: Iconos.historial.rawValue, text: "Historial de Meses")
+                                }
                                 NavigationLink(destination:Profile()) {
                                     SideMenuRowView(icono: Iconos.profile.rawValue, text: "Perfil")
                                 }

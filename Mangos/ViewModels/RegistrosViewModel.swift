@@ -321,6 +321,12 @@ class RegistrosViewModel: ObservableObject {
         sumaTarjetas = tarjetas
     }
     
+    
+    
+    ///Funcion para eliminar registros de swiftData Automaticamente los ultimos dias del mes
+    
+  
+    
 }
 
 

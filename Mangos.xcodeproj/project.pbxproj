@@ -29,6 +29,8 @@
 		51870EAF2BB7B0A500FDD7CA /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51870EAE2BB7B0A500FDD7CA /* SideMenuView.swift */; };
 		51870EB12BB7B1B000FDD7CA /* SideMenuHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51870EB02BB7B1B000FDD7CA /* SideMenuHeaderView.swift */; };
 		51870EB32BB7B87400FDD7CA /* SideMenuRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51870EB22BB7B87400FDD7CA /* SideMenuRowView.swift */; };
+		518EE30B2BCE004B0075B157 /* HistorialMeses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EE30A2BCE004B0075B157 /* HistorialMeses.swift */; };
+		518EE30D2BCE04E70075B157 /* CardsHistorialMeses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 518EE30C2BCE04E70075B157 /* CardsHistorialMeses.swift */; };
 		519ABFB22B9BD0AD007B919E /* MangosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFB12B9BD0AD007B919E /* MangosApp.swift */; };
 		519ABFB42B9BD0AD007B919E /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFB32B9BD0AD007B919E /* Home.swift */; };
 		519ABFB62B9BD0AF007B919E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 519ABFB52B9BD0AF007B919E /* Assets.xcassets */; };
@@ -89,6 +91,8 @@
 		51870EAE2BB7B0A500FDD7CA /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
 		51870EB02BB7B1B000FDD7CA /* SideMenuHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuHeaderView.swift; sourceTree = "<group>"; };
 		51870EB22BB7B87400FDD7CA /* SideMenuRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuRowView.swift; sourceTree = "<group>"; };
+		518EE30A2BCE004B0075B157 /* HistorialMeses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialMeses.swift; sourceTree = "<group>"; };
+		518EE30C2BCE04E70075B157 /* CardsHistorialMeses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsHistorialMeses.swift; sourceTree = "<group>"; };
 		519ABFAE2B9BD0AD007B919E /* Mangos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mangos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		519ABFB12B9BD0AD007B919E /* MangosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MangosApp.swift; sourceTree = "<group>"; };
 		519ABFB32B9BD0AD007B919E /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 				519ABFCD2B9D2A11007B919E /* InfoNameCard.swift */,
 				51EF66DA2BB661A2006DB89F /* DolarCard.swift */,
 				51D449702BC7801C00DA5AA3 /* DolarCardLoading.swift */,
+				518EE30C2BCE04E70075B157 /* CardsHistorialMeses.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -265,6 +270,7 @@
 				51B28AAE2BAF842100667F14 /* TarjetasView.swift */,
 				519ABFD72B9D3334007B919E /* Profile.swift */,
 				515C88192BB5F413007A8BCD /* DolarView.swift */,
+				518EE30A2BCE004B0075B157 /* HistorialMeses.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				51D449712BC7801C00DA5AA3 /* DolarCardLoading.swift in Sources */,
 				514924292BBDEA3C00896874 /* CategorysViewSheet.swift in Sources */,
 				51EF66DB2BB661A2006DB89F /* DolarCard.swift in Sources */,
+				518EE30D2BCE04E70075B157 /* CardsHistorialMeses.swift in Sources */,
 				514EE2112B9FFD5A007C644B /* GeneralFunctions.swift in Sources */,
 				514EE2172BA0E461007C644B /* NewRegistroP1.swift in Sources */,
 				515C88162BB5F2CE007A8BCD /* DolarModel.swift in Sources */,
@@ -435,6 +442,7 @@
 				519ABFEC2B9D7A9C007B919E /* TextFieldNumerico.swift in Sources */,
 				519ABFD22B9D2D9E007B919E /* TabBarView.swift in Sources */,
 				514EE20F2B9FF0AA007C644B /* ViewModelIngresos.swift in Sources */,
+				518EE30B2BCE004B0075B157 /* HistorialMeses.swift in Sources */,
 				51870EAF2BB7B0A500FDD7CA /* SideMenuView.swift in Sources */,
 				519ABFCA2B9D249C007B919E /* CardContainer.swift in Sources */,
 				51B28A852BABAB9600667F14 /* ListHomeItemCard.swift in Sources */,

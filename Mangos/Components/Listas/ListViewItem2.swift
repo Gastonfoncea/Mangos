@@ -10,7 +10,6 @@ import SwiftUI
 struct ListViewItem2: View {
     
     @StateObject var generalFunc = GeneralFunctions()
-    @StateObject var appTheme = AppTheme()
     var descripcion: String
     var tipo: String
     var monto: String
