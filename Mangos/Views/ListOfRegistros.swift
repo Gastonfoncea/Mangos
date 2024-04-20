@@ -46,9 +46,6 @@ struct ListOfRegistros: View {
             }
         }
         .navigationTitle("Categoria")
-        .onChange(of: vmRegistros.dimiss) {
-            dismiss()
-        }
     }
       
 }

@@ -11,18 +11,15 @@ struct NewRegPart2: View {
     
     @StateObject var vmFunctions = GeneralFunctions()
     @EnvironmentObject var vmRegistros: RegistrosViewModel
-    @ObservedObject var vmNewR : ViewModelNewRegistro
     @StateObject var vmCategory = CategoryModel()
     var tipo: String
     var monto: String
     @State var referencia: String = ""
     @State var date: Date = .now
-    @State var selected: String = "Sueldo"
     @State var validation = false
     @State var validationCat = false
     @State private var isShowingCategories = false
     @State private var selectedCategory: String?
-    @Environment(\.presentationMode) var presentationMode
   
     
     var body: some View {
@@ -90,7 +87,6 @@ struct NewRegPart2: View {
                                 .opacity(validationCat ? 1 : 0)
                                 .opacity((selectedCategory != nil) ? 0 : 1)
                              
-                                
                         }
                         .padding(.leading,15)
                         Spacer()
@@ -165,6 +161,6 @@ struct NewRegPart2: View {
 }
 
 #Preview {
-    NewRegPart2(vmNewR: ViewModelNewRegistro(), tipo: "Ingresos", monto: "")
+    NewRegPart2(tipo: "Ingresos", monto: "")
         .environmentObject(RegistrosViewModel())
 }

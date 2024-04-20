@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+//Vista donde mostramos las categorias para seleccionar en la grilla al momento de crear un nuevo Registro
+
 struct CategorysViewSheet: View {
     
     @Binding var isShowingCategories: Bool

@@ -53,11 +53,9 @@
 		519ABFEA2B9D7A18007B919E /* TextfieldGeneral.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFE92B9D7A18007B919E /* TextfieldGeneral.swift */; };
 		519ABFEC2B9D7A9C007B919E /* TextFieldNumerico.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFEB2B9D7A9C007B919E /* TextFieldNumerico.swift */; };
 		519ABFEE2B9D8061007B919E /* NewRegPart2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFED2B9D8061007B919E /* NewRegPart2.swift */; };
-		51B28A852BABAB9600667F14 /* ListHomeItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28A842BABAB9600667F14 /* ListHomeItemCard.swift */; };
 		51B28A872BABC41A00667F14 /* ButtonTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28A862BABC41A00667F14 /* ButtonTipo.swift */; };
 		51B28AAD2BAF81B300667F14 /* LogoWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28AAC2BAF81B300667F14 /* LogoWarning.swift */; };
 		51B28AAF2BAF842100667F14 /* TarjetasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B28AAE2BAF842100667F14 /* TarjetasView.swift */; };
-		51BBA6542BAF97F000E2D960 /* ViewModelNewRegistro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */; };
 		51C09EDF2BC3747200123BA0 /* EnumIconos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C09EDE2BC3747200123BA0 /* EnumIconos.swift */; };
 		51C09F1B2BC4BEA900123BA0 /* EnumCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */; };
 		51D39D512BB6097F00246820 /* DolarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51D39D502BB6097F00246820 /* DolarViewModel.swift */; };
@@ -116,11 +114,9 @@
 		519ABFE92B9D7A18007B919E /* TextfieldGeneral.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextfieldGeneral.swift; sourceTree = "<group>"; };
 		519ABFEB2B9D7A9C007B919E /* TextFieldNumerico.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldNumerico.swift; sourceTree = "<group>"; };
 		519ABFED2B9D8061007B919E /* NewRegPart2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegPart2.swift; sourceTree = "<group>"; };
-		51B28A842BABAB9600667F14 /* ListHomeItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHomeItemCard.swift; sourceTree = "<group>"; };
 		51B28A862BABC41A00667F14 /* ButtonTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTipo.swift; sourceTree = "<group>"; };
 		51B28AAC2BAF81B300667F14 /* LogoWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoWarning.swift; sourceTree = "<group>"; };
 		51B28AAE2BAF842100667F14 /* TarjetasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TarjetasView.swift; sourceTree = "<group>"; };
-		51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelNewRegistro.swift; sourceTree = "<group>"; };
 		51C09EDE2BC3747200123BA0 /* EnumIconos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumIconos.swift; sourceTree = "<group>"; };
 		51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCategorias.swift; sourceTree = "<group>"; };
 		51D39D502BB6097F00246820 /* DolarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DolarViewModel.swift; sourceTree = "<group>"; };
@@ -146,7 +142,6 @@
 			isa = PBXGroup;
 			children = (
 				514EE24D2BA54463007C644B /* ListViewItemCard.swift */,
-				51B28A842BABAB9600667F14 /* ListHomeItemCard.swift */,
 				51870EAE2BB7B0A500FDD7CA /* SideMenuView.swift */,
 				51870EB02BB7B1B000FDD7CA /* SideMenuHeaderView.swift */,
 				51870EB22BB7B87400FDD7CA /* SideMenuRowView.swift */,
@@ -293,7 +288,6 @@
 				519ABFD32B9D2E8D007B919E /* RegistrosViewModel.swift */,
 				514EE20E2B9FF0AA007C644B /* ViewModelIngresos.swift */,
 				514EE2102B9FFD5A007C644B /* GeneralFunctions.swift */,
-				51BBA6532BAF97F000E2D960 /* ViewModelNewRegistro.swift */,
 				51D39D502BB6097F00246820 /* DolarViewModel.swift */,
 			);
 			path = ViewModels;
@@ -398,7 +392,6 @@
 				514EE2132BA09153007C644B /* ListOfRegistros.swift in Sources */,
 				51D4F0292BA794B0008259E3 /* IngresosView.swift in Sources */,
 				5152AEC52BBAF87A00F572D7 /* ListViewItem2.swift in Sources */,
-				51BBA6542BAF97F000E2D960 /* ViewModelNewRegistro.swift in Sources */,
 				519ABFD42B9D2E8D007B919E /* RegistrosViewModel.swift in Sources */,
 				51ED8A342BA91C940079AF36 /* AhorrosView.swift in Sources */,
 				519ABFDC2B9D5571007B919E /* ListOfMovimientos.swift in Sources */,
@@ -445,7 +438,6 @@
 				518EE30B2BCE004B0075B157 /* HistorialMeses.swift in Sources */,
 				51870EAF2BB7B0A500FDD7CA /* SideMenuView.swift in Sources */,
 				519ABFCA2B9D249C007B919E /* CardContainer.swift in Sources */,
-				51B28A852BABAB9600667F14 /* ListHomeItemCard.swift in Sources */,
 				51870EB12BB7B1B000FDD7CA /* SideMenuHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

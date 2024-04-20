@@ -9,14 +9,10 @@ import SwiftUI
 
 struct NewRegistroP1: View {
     
-    @StateObject var vmNewRegistro = ViewModelNewRegistro()
     @State var tipo: String
     @State var monto: String = ""
     @State var montoFormateado1: String = ""
-    @State private var hasEnteredValue = false
     @FocusState private var keyboardFocused: Bool
-    @Environment (\.dismiss) private var dismiss
-   
     
     var body: some View {
         
@@ -49,11 +45,8 @@ struct NewRegistroP1: View {
                 .padding(.top,200)
             Spacer()
             
-            NavigationLink(destination:NewRegPart2(vmNewR: vmNewRegistro, tipo: tipo, monto: montoFormateado1)) {
+            NavigationLink(destination:NewRegPart2(tipo: tipo, monto: montoFormateado1)) {
              ButtonAceptar(name: "Continuar")
-            }
-            .onTapGesture {
-                vmNewRegistro.monto = monto
             }
             .padding(.bottom,50)
             
@@ -65,5 +58,4 @@ struct NewRegistroP1: View {
 
 #Preview {
     NewRegistroP1(tipo: "Ingresos")
-       // .environmentObject(RegistrosViewModel())
 }
