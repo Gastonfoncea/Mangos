@@ -10,7 +10,7 @@ import SwiftUI
 struct ListOfMovimientos: View {
     
     @ObservedObject var generalFunc = GeneralFunctions()
-    @ObservedObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var vmRegistros: RegistrosViewModel
     @State var suma = 0
     
     var body: some View {
@@ -50,5 +50,6 @@ struct ListOfMovimientos: View {
 }
 
 #Preview {
-    ListOfMovimientos(vmRegistros: RegistrosViewModel())
+    ListOfMovimientos()
+        .environmentObject(RegistrosViewModel())
 }

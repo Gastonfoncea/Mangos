@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ListOfRegistros: View {
     
-    @ObservedObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var vmRegistros: RegistrosViewModel
     @State private var registros = RegistrosList.listarRegistros()
     @Environment (\.dismiss) private var dismiss
     
@@ -19,7 +19,7 @@ struct ListOfRegistros: View {
             Form{
                 Section(header: Text("Selecciona una Categoria").textCase(nil)){
                     List(registros, id: \.name) {registro in
-                        NavigationLink(destination:NewRegistroP1(vmRegistros: vmRegistros, tipo: registro.name)){
+                        NavigationLink(destination:NewRegistroP1(tipo: registro.name)){
                             HStack{
                                 ZStack{
                                     Circle()
@@ -54,5 +54,6 @@ struct ListOfRegistros: View {
 }
 
 #Preview {
-    ListOfRegistros(vmRegistros: RegistrosViewModel())
+    ListOfRegistros()
+        .environmentObject(RegistrosViewModel())
 }

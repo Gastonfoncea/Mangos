@@ -10,9 +10,8 @@ import SwiftData
 
 struct IngresosView: View {
     
-    @ObservedObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var vmRegistros: RegistrosViewModel
     @StateObject var generalFunc = GeneralFunctions()
-    @State var suma = 0
     
     var body: some View {
         VStack{
@@ -43,12 +42,7 @@ struct IngresosView: View {
                     }
                     .onDelete { indexSet in
                         for index in indexSet{
-                            vmRegistros.deleteRegistro(tipo: .Ingresos, index: index)
-                            suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
-                            vmRegistros.balance()
-                            vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
-                            vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
-                            vmRegistros.sumaGastos = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
+                            vmRegistros.deleteRegistro(tipo: .Ingresos, index: index)  
                         }
                     }
                
@@ -62,5 +56,6 @@ struct IngresosView: View {
 }
 
 #Preview {
-    IngresosView(vmRegistros: RegistrosViewModel())
+    IngresosView()
+        .environmentObject(RegistrosViewModel())
 }

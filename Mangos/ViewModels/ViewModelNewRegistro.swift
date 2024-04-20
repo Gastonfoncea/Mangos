@@ -8,12 +8,8 @@
 import Foundation
 
 class ViewModelNewRegistro: ObservableObject {
+    
     @Published var monto: String = ""
-    
-    
-    
-    
-    
     
 }
 

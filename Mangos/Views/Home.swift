@@ -12,7 +12,7 @@ struct Home: View {
     
     @Environment(\.modelContext) var modelContext
     @StateObject var appTheme = AppTheme()
-    @ObservedObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var vmRegistros: RegistrosViewModel
     @State private var showMenu = false
     
     var body: some View {
@@ -24,16 +24,16 @@ struct Home: View {
                     }
                     .padding(.horizontal,20)
                     HStack(spacing:10){
-                        NavigationLink(destination:IngresosView(vmRegistros: vmRegistros)){
+                        NavigationLink(destination:IngresosView()){
                             ButtonTipo(tipo: Categorias.ingresos.rawValue)
                         }
-                        NavigationLink(destination:GastosView(vmRegistros: vmRegistros)){
+                        NavigationLink(destination:GastosView()){
                             ButtonTipo(tipo: Categorias.gastos.rawValue)
                         }
-                        NavigationLink(destination:AhorrosView(vmRegistros: vmRegistros)){
+                        NavigationLink(destination:AhorrosView()){
                             ButtonTipo(tipo: Categorias.ahorros.rawValue)
                         }
-                        NavigationLink(destination:TarjetasView(vmRegistros: vmRegistros)){
+                        NavigationLink(destination:TarjetasView()){
                             ButtonTipo(tipo: Categorias.tarjetas.rawValue)
                         }
                     }
@@ -48,7 +48,7 @@ struct Home: View {
                                 .fontWeight(.medium)
                             
                             Spacer()
-                            NavigationLink(destination: ListOfMovimientos(vmRegistros: vmRegistros)) {
+                            NavigationLink(destination: ListOfMovimientos()) {
                                 Text("Ver todas")
                                     .font(.subheadline)
                                     .fontWeight(.medium)
@@ -74,7 +74,7 @@ struct Home: View {
                 .offset(y:25)
                 .toolbar {
                     ToolbarItem(placement: .bottomBar) {
-                        NavigationLink(destination:ListOfRegistros(vmRegistros: vmRegistros)) {
+                        NavigationLink(destination:ListOfRegistros()) {
                             PlusButton()
                                 .opacity(showMenu ? 0 : 1)
                         }
@@ -101,16 +101,10 @@ struct Home: View {
             .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
         }
-        .onAppear{
-            vmRegistros.balance()
-            vmRegistros.sumaSoloIngresos()
-            vmRegistros.sumaSoloGastos()
-            vmRegistros.sumaSoloAhorros()
-            vmRegistros.sumaSoloTarjetas()
-        }
     }
 }
 
 #Preview {
-    Home(vmRegistros: RegistrosViewModel())
+    Home()
+        .environmentObject(RegistrosViewModel())
 }

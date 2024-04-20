@@ -10,7 +10,7 @@ import SwiftUI
 struct NewRegPart2: View {
     
     @StateObject var vmFunctions = GeneralFunctions()
-    @ObservedObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var vmRegistros: RegistrosViewModel
     @ObservedObject var vmNewR : ViewModelNewRegistro
     @StateObject var vmCategory = CategoryModel()
     var tipo: String
@@ -146,10 +146,6 @@ struct NewRegPart2: View {
                         validationCat = true
                     } else if !referencia.isEmpty && selectedCategory != nil {
                         vmRegistros.saveRegistro(tipo: tipo, monto: monto, detalle: referencia, categoria: selectedCategory ?? "", fecha: date)
-                        vmRegistros.balance()
-                        vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
-                        vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
-                        vmRegistros.sumaGastos = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
                     }
                  
                 }, label: {
@@ -169,5 +165,6 @@ struct NewRegPart2: View {
 }
 
 #Preview {
-    NewRegPart2(vmRegistros: RegistrosViewModel(), vmNewR: ViewModelNewRegistro(), tipo: "Ingresos", monto: "")
+    NewRegPart2(vmNewR: ViewModelNewRegistro(), tipo: "Ingresos", monto: "")
+        .environmentObject(RegistrosViewModel())
 }

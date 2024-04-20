@@ -61,7 +61,13 @@ class RegistrosViewModel: ObservableObject {
     func saveRegistro(tipo: String, monto: String, detalle: String,categoria: String, fecha: Date) {
         let registroSwiftData = RegistrosModel(tipo: tipo, monto: monto, detalle: detalle, categoria: categoria, fecha: fecha)
         modelContext.insert(registroSwiftData)
+        balance()
+        sumaIngresos = sumarRegistrosPorTipo(tipo: .Ingresos)
+        sumaAhorros = sumarRegistrosPorTipo(tipo: .Ahorros)
+        sumaGastos = sumarRegistrosPorTipo(tipo: .Gastos)
+        sumaTarjetas = sumarRegistrosPorTipo(tipo: .Tarjetas)
         print("El registro se guardo correctamente")
+        
     }
     
     
@@ -137,6 +143,11 @@ class RegistrosViewModel: ObservableObject {
             do {
                 let ingresos = try modelContext.fetch(ingresosDescriptor)
                 modelContext.delete(ingresos[index])
+                balance()
+                sumaIngresos = sumarRegistrosPorTipo(tipo: .Ingresos)
+                sumaAhorros = sumarRegistrosPorTipo(tipo: .Ahorros)
+                sumaGastos = sumarRegistrosPorTipo(tipo: .Gastos)
+                sumaTarjetas = sumarRegistrosPorTipo(tipo: .Tarjetas)
             } catch {
                 print("No pudimos eliminar el registro")
             }
@@ -147,6 +158,11 @@ class RegistrosViewModel: ObservableObject {
             do {
                 let gastos = try modelContext.fetch(gastosDescriptor)
                 modelContext.delete(gastos[index])
+                balance()
+                sumaIngresos = sumarRegistrosPorTipo(tipo: .Ingresos)
+                sumaAhorros = sumarRegistrosPorTipo(tipo: .Ahorros)
+                sumaGastos = sumarRegistrosPorTipo(tipo: .Gastos)
+                sumaTarjetas = sumarRegistrosPorTipo(tipo: .Tarjetas)
             } catch {
                 print("No pudimos eliminar el registro")
                 
@@ -158,6 +174,11 @@ class RegistrosViewModel: ObservableObject {
             do {
                 let ahorros = try modelContext.fetch(ahorrosDescriptor)
                 modelContext.delete(ahorros[index])
+                balance()
+                sumaIngresos = sumarRegistrosPorTipo(tipo: .Ingresos)
+                sumaAhorros = sumarRegistrosPorTipo(tipo: .Ahorros)
+                sumaGastos = sumarRegistrosPorTipo(tipo: .Gastos)
+                sumaTarjetas = sumarRegistrosPorTipo(tipo: .Tarjetas)
             } catch {
                 print("No pudimos eliminar el registro")
             }
@@ -168,6 +189,11 @@ class RegistrosViewModel: ObservableObject {
             do {
                 let tarjetas = try modelContext.fetch(tarjetasDescriptor)
                 modelContext.delete(tarjetas[index])
+                balance()
+                sumaIngresos = sumarRegistrosPorTipo(tipo: .Ingresos)
+                sumaAhorros = sumarRegistrosPorTipo(tipo: .Ahorros)
+                sumaGastos = sumarRegistrosPorTipo(tipo: .Gastos)
+                sumaTarjetas = sumarRegistrosPorTipo(tipo: .Tarjetas)
             } catch {
                 print("No pudimos eliminar el registro")
             }

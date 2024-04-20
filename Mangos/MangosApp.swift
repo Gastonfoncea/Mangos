@@ -15,7 +15,7 @@ struct MangosApp: App {
     
     var body: some Scene {
         WindowGroup {
-            Home(vmRegistros: vmRegistros)
+            Home()
                 .onAppear{
                     vmRegistros.balance()
                     vmRegistros.sumaSoloIngresos()
@@ -24,6 +24,7 @@ struct MangosApp: App {
                     vmRegistros.sumaSoloTarjetas()
                 }
         }
+        .environmentObject(vmRegistros)
         
     }
 }

@@ -9,9 +9,8 @@ import SwiftUI
 
 struct TarjetasView: View {
     
-    @ObservedObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var vmRegistros: RegistrosViewModel
     @StateObject var generalFunc = GeneralFunctions()
-    @State var suma = 0
     
     var body: some View {
         VStack{
@@ -42,11 +41,6 @@ struct TarjetasView: View {
                 .onDelete { indexSet in
                     for index in indexSet{
                         vmRegistros.deleteRegistro(tipo: .Tarjetas, index: index)
-                        suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Tarjetas)
-                        vmRegistros.balance()
-                        vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
-                        vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
-                        vmRegistros.sumaGastos = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
                         
                     }
                 }
@@ -59,5 +53,6 @@ struct TarjetasView: View {
 }
 
 #Preview {
-    TarjetasView(vmRegistros: RegistrosViewModel())
+    TarjetasView()
+        .environmentObject(RegistrosViewModel())
 }

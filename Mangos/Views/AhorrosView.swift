@@ -9,9 +9,8 @@ import SwiftUI
 
 struct AhorrosView: View {
     
-    @ObservedObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var vmRegistros: RegistrosViewModel
     @StateObject var generalFunc = GeneralFunctions()
-    @State var suma = 0
     
     var body: some View {
         VStack{
@@ -42,11 +41,6 @@ struct AhorrosView: View {
                 .onDelete { indexSet in
                     for index in indexSet{
                         vmRegistros.deleteRegistro(tipo: .Ahorros, index: index)
-                        suma = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
-                        vmRegistros.balance()
-                        vmRegistros.sumaIngresos = vmRegistros.sumarRegistrosPorTipo(tipo: .Ingresos)
-                        vmRegistros.sumaAhorros = vmRegistros.sumarRegistrosPorTipo(tipo: .Ahorros)
-                        vmRegistros.sumaGastos = vmRegistros.sumarRegistrosPorTipo(tipo: .Gastos)
                         
                     }
                 }
@@ -62,5 +56,6 @@ struct AhorrosView: View {
 }
 
 #Preview {
-    AhorrosView(vmRegistros: RegistrosViewModel())
+    AhorrosView()
+        .environmentObject(RegistrosViewModel())
 }
