@@ -10,7 +10,7 @@ import SwiftData
 
 struct Home: View {
     
-    @Environment(\.modelContext) var modelContext
+   // @Environment(\.modelContext) var modelContext
     @StateObject var appTheme = AppTheme()
     @EnvironmentObject var vmRegistros: RegistrosViewModel
     @State private var showMenu = false

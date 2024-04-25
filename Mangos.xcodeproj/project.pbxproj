@@ -40,7 +40,6 @@
 		519ABFCC2B9D2572007B919E /* CardMontoHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFCB2B9D2572007B919E /* CardMontoHome.swift */; };
 		519ABFCE2B9D2A11007B919E /* InfoNameCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFCD2B9D2A11007B919E /* InfoNameCard.swift */; };
 		519ABFD02B9D2CE2007B919E /* RegistrosModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFCF2B9D2CE2007B919E /* RegistrosModel.swift */; };
-		519ABFD22B9D2D9E007B919E /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFD12B9D2D9E007B919E /* TabBarView.swift */; };
 		519ABFD42B9D2E8D007B919E /* RegistrosViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFD32B9D2E8D007B919E /* RegistrosViewModel.swift */; };
 		519ABFD82B9D3334007B919E /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFD72B9D3334007B919E /* Profile.swift */; };
 		519ABFDA2B9D54FE007B919E /* TopCardContainerHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 519ABFD92B9D54FE007B919E /* TopCardContainerHome.swift */; };
@@ -101,7 +100,6 @@
 		519ABFCB2B9D2572007B919E /* CardMontoHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMontoHome.swift; sourceTree = "<group>"; };
 		519ABFCD2B9D2A11007B919E /* InfoNameCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoNameCard.swift; sourceTree = "<group>"; };
 		519ABFCF2B9D2CE2007B919E /* RegistrosModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrosModel.swift; sourceTree = "<group>"; };
-		519ABFD12B9D2D9E007B919E /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		519ABFD32B9D2E8D007B919E /* RegistrosViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrosViewModel.swift; sourceTree = "<group>"; };
 		519ABFD72B9D3334007B919E /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		519ABFD92B9D54FE007B919E /* TopCardContainerHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopCardContainerHome.swift; sourceTree = "<group>"; };
@@ -230,6 +228,7 @@
 			children = (
 				519ABFB12B9BD0AD007B919E /* MangosApp.swift */,
 				519ABFB52B9BD0AF007B919E /* Assets.xcassets */,
+				51DCB7082BD9A8B10063C3E2 /* Router */,
 				51C09EDD2BC3745700123BA0 /* Enums */,
 				515C88142BB5F2BD007A8BCD /* Managers */,
 				519ABFB72B9BD0AF007B919E /* Preview Content */,
@@ -252,7 +251,6 @@
 		519ABFBF2B9CC22E007B919E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				519ABFD12B9D2D9E007B919E /* TabBarView.swift */,
 				519ABFB32B9BD0AD007B919E /* Home.swift */,
 				514EE2122BA09153007C644B /* ListOfRegistros.swift */,
 				514EE2162BA0E461007C644B /* NewRegistroP1.swift */,
@@ -312,6 +310,13 @@
 				51C09F1A2BC4BEA900123BA0 /* EnumCategorias.swift */,
 			);
 			path = Enums;
+			sourceTree = "<group>";
+		};
+		51DCB7082BD9A8B10063C3E2 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -433,7 +438,6 @@
 				519ABFDE2B9D561C007B919E /* AppTheme.swift in Sources */,
 				515C881E2BB5F568007A8BCD /* DolarEnum.swift in Sources */,
 				519ABFEC2B9D7A9C007B919E /* TextFieldNumerico.swift in Sources */,
-				519ABFD22B9D2D9E007B919E /* TabBarView.swift in Sources */,
 				514EE20F2B9FF0AA007C644B /* ViewModelIngresos.swift in Sources */,
 				518EE30B2BCE004B0075B157 /* HistorialMeses.swift in Sources */,
 				51870EAF2BB7B0A500FDD7CA /* SideMenuView.swift in Sources */,

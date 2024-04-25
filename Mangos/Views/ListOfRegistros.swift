@@ -11,7 +11,6 @@ struct ListOfRegistros: View {
     
     @EnvironmentObject var vmRegistros: RegistrosViewModel
     @State private var registros = RegistrosList.listarRegistros()
-    @Environment (\.dismiss) private var dismiss
     
     var body: some View {
         VStack{
