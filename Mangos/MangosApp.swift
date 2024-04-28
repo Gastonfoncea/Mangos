@@ -25,6 +25,7 @@ struct MangosApp: App {
                 }
         }
         .environmentObject(vmRegistros)
+        .environmentObject(ViewFlowData.shared)
         
     }
 }

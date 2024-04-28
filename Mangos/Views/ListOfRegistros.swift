@@ -10,33 +10,36 @@ import SwiftUI
 struct ListOfRegistros: View {
     
     @EnvironmentObject var vmRegistros: RegistrosViewModel
+    @EnvironmentObject var viewFlow: ViewFlowData
     @State private var registros = RegistrosList.listarRegistros()
     
     var body: some View {
         VStack{
-            
             Form{
                 Section(header: Text("Selecciona una Categoria").textCase(nil)){
                     List(registros, id: \.name) {registro in
-                        NavigationLink(destination:NewRegistroP1(tipo: registro.name)){
-                            HStack{
-                                ZStack{
-                                    Circle()
-                                        .foregroundStyle(registro.color)
-                                        .frame(width: 45)
-                                    Image(systemName: registro.icon)
-                                        .resizable()
-                                        .scaledToFit()
-                                        .frame(width: 22)
-                                        .foregroundStyle(.white)
+                            Button {
+                                viewFlow.tipo = registro.name
+                                viewFlow.navigateToNewRegP1()
+                            } label: {
+                                HStack{
+                                    ZStack{
+                                        Circle()
+                                            .foregroundStyle(registro.color)
+                                            .frame(width: 45)
+                                        Image(systemName: registro.icon)
+                                            .resizable()
+                                            .scaledToFit()
+                                            .frame(width: 22)
+                                            .foregroundStyle(.white)
+                                    }
+                                    Text(registro.name)
+                                        .foregroundStyle(.fontColor1G)
+                                        .fontWeight(.semibold)
+                                        .font(.system(size: AppTheme.fontSizeListas))
+                                        .padding(.leading)
                                 }
-                                Text(registro.name)
-                                    .foregroundStyle(.fontColor1G)
-                                    .fontWeight(.semibold)
-                                    .font(.system(size: AppTheme.fontSizeListas))
-                                    .padding(.leading)
                             }
-                        }
                     }
                 }
                 .font(.title3)
@@ -52,4 +55,5 @@ struct ListOfRegistros: View {
 #Preview {
     ListOfRegistros()
         .environmentObject(RegistrosViewModel())
+        .environmentObject(ViewFlowData())
 }

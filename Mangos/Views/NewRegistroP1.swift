@@ -9,7 +9,8 @@ import SwiftUI
 
 struct NewRegistroP1: View {
     
-    @State var tipo: String
+   // @State var tipo: String
+    @EnvironmentObject var viewFlow: ViewFlowData
     @State var monto: String = ""
     @State var montoFormateado1: String = ""
     @FocusState private var keyboardFocused: Bool
@@ -44,9 +45,11 @@ struct NewRegistroP1: View {
                                }
                 .padding(.top,200)
             Spacer()
-            
-            NavigationLink(destination:NewRegPart2(tipo: tipo, monto: montoFormateado1)) {
-             ButtonAceptar(name: "Continuar")
+            Button {
+                viewFlow.monto = montoFormateado1
+                viewFlow.navigateToNewRegP2()
+            } label: {
+                ButtonAceptar(name: "Continuar")
             }
             .padding(.bottom,50)
             
@@ -57,5 +60,6 @@ struct NewRegistroP1: View {
 }
 
 #Preview {
-    NewRegistroP1(tipo: "Ingresos")
+    NewRegistroP1()
+        .environmentObject(ViewFlowData())
 }

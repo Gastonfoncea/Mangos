@@ -10,13 +10,13 @@ import SwiftData
 
 struct Home: View {
     
-   // @Environment(\.modelContext) var modelContext
     @StateObject var appTheme = AppTheme()
     @EnvironmentObject var vmRegistros: RegistrosViewModel
     @State private var showMenu = false
+    @EnvironmentObject var viewFlow: ViewFlowData
     
     var body: some View {
-        NavigationStack{
+        NavigationStack(path: $viewFlow.path) {
             ZStack {
                 VStack{
                     HStack{
@@ -74,18 +74,22 @@ struct Home: View {
                 .offset(y:25)
                 .toolbar {
                     ToolbarItem(placement: .bottomBar) {
-                        NavigationLink(destination:ListOfRegistros()) {
+                        Button {
+                            viewFlow.navigateToListOgReg()
+                        } label: {
                             PlusButton()
                                 .opacity(showMenu ? 0 : 1)
                         }
                         .animation(nil)
                         .padding(.bottom,30)
+                        .navigationDestination(for:ViewsNavigation.self) {destination in
+                            ViewsFactory.setViewForDestination(destination)
+                        }
                     }
-                    
+ 
                 }
                 SideMenuView(isShowing: $showMenu)
             }
-            //.toolbar(showMenu ? .hidden : .visible ,for: .tabBar )
             .toolbarBackground(.hidden, for: .bottomBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -107,4 +111,5 @@ struct Home: View {
 #Preview {
     Home()
         .environmentObject(RegistrosViewModel())
+        .environmentObject(ViewFlowData())
 }

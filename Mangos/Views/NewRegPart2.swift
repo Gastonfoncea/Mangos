@@ -9,11 +9,10 @@ import SwiftUI
 
 struct NewRegPart2: View {
     
+    @EnvironmentObject var viewFlow: ViewFlowData
     @StateObject var vmFunctions = GeneralFunctions()
     @EnvironmentObject var vmRegistros: RegistrosViewModel
     @StateObject var vmCategory = CategoryModel()
-    var tipo: String
-    var monto: String
     @State var referencia: String = ""
     @State var date: Date = .now
     @State var validation = false
@@ -21,16 +20,15 @@ struct NewRegPart2: View {
     @State private var isShowingCategories = false
     @State private var selectedCategory: String?
   
-    
     var body: some View {
         VStack{
             
             Spacer()
             
-            Text("Monto del \(tipo.dropLast())")
+            Text("Monto del \(viewFlow.tipo.dropLast())")
                 .foregroundStyle(Color.fontColor1G)
                 .bold()
-            Text("$ \(vmFunctions.StringToInt(valor: monto))")
+            Text("$ \(vmFunctions.StringToInt(valor: viewFlow.monto))")
                 .font(.system(size: AppTheme.fontSizeMontoNumericoGrande))
                 .foregroundStyle(Color.fontColor1G)
                 .bold()
@@ -55,8 +53,6 @@ struct NewRegPart2: View {
                                     validation = false
                                 }
                             LogoWarning().opacity(validation ? 1 : 0)
-                                //.padding(.trailing)
-                            
                         }
                         Spacer()
                     }
@@ -103,7 +99,7 @@ struct NewRegPart2: View {
                             .scaledToFit()
                             .frame(width: 29,height: 29)
                         
-                        Text("\(tipo.dropLast())")
+                        Text("\(viewFlow.tipo.dropLast())")
                             .fontWeight(.semibold)
                             .padding(.leading,15)
                         Spacer()
@@ -141,7 +137,8 @@ struct NewRegPart2: View {
                     } else if selectedCategory == nil {
                         validationCat = true
                     } else if !referencia.isEmpty && selectedCategory != nil {
-                        vmRegistros.saveRegistro(tipo: tipo, monto: monto, detalle: referencia, categoria: selectedCategory ?? "", fecha: date)
+                        vmRegistros.saveRegistro(tipo: viewFlow.tipo, monto: viewFlow.monto, detalle: referencia, categoria: selectedCategory ?? "", fecha: date)
+                        viewFlow.navigateBackToRoot()
                     }
                  
                 }, label: {
@@ -161,6 +158,7 @@ struct NewRegPart2: View {
 }
 
 #Preview {
-    NewRegPart2(tipo: "Ingresos", monto: "")
+    NewRegPart2()
         .environmentObject(RegistrosViewModel())
+        .environmentObject(ViewFlowData())
 }

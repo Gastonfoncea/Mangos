@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		513686CC2BDEFE09008C3201 /* ViewsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513686CB2BDEFE09008C3201 /* ViewsNavigation.swift */; };
+		513686CE2BDEFE4C008C3201 /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513686CD2BDEFE4C008C3201 /* ViewsFactory.swift */; };
+		513686D02BDEFFE8008C3201 /* ViewFlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513686CF2BDEFFE8008C3201 /* ViewFlowData.swift */; };
 		514924292BBDEA3C00896874 /* CategorysViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514924282BBDEA3C00896874 /* CategorysViewSheet.swift */; };
 		5149242B2BBDEC0700896874 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149242A2BBDEC0700896874 /* CategoryModel.swift */; };
 		5149242D2BBDFE7700896874 /* LogoYNombrePorTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149242C2BBDFE7700896874 /* LogoYNombrePorTipo.swift */; };
@@ -66,6 +69,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		513686CB2BDEFE09008C3201 /* ViewsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsNavigation.swift; sourceTree = "<group>"; };
+		513686CD2BDEFE4C008C3201 /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
+		513686CF2BDEFFE8008C3201 /* ViewFlowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFlowData.swift; sourceTree = "<group>"; };
 		514924282BBDEA3C00896874 /* CategorysViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorysViewSheet.swift; sourceTree = "<group>"; };
 		5149242A2BBDEC0700896874 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		5149242C2BBDFE7700896874 /* LogoYNombrePorTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoYNombrePorTipo.swift; sourceTree = "<group>"; };
@@ -315,6 +321,9 @@
 		51DCB7082BD9A8B10063C3E2 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				513686CB2BDEFE09008C3201 /* ViewsNavigation.swift */,
+				513686CD2BDEFE4C008C3201 /* ViewsFactory.swift */,
+				513686CF2BDEFFE8008C3201 /* ViewFlowData.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -408,12 +417,14 @@
 				5149242D2BBDFE7700896874 /* LogoYNombrePorTipo.swift in Sources */,
 				515C88182BB5F3B6007A8BCD /* NetworkManager.swift in Sources */,
 				519ABFE62B9D71FC007B919E /* PlusButton2.swift in Sources */,
+				513686CE2BDEFE4C008C3201 /* ViewsFactory.swift in Sources */,
 				519ABFE82B9D7970007B919E /* ButtonAceptar.swift in Sources */,
 				514EE21E2BA2974E007C644B /* LogoCirclePorTipo.swift in Sources */,
 				519ABFB42B9BD0AD007B919E /* Home.swift in Sources */,
 				515C881C2BB5F50D007A8BCD /* NetworkErrors.swift in Sources */,
 				51D449712BC7801C00DA5AA3 /* DolarCardLoading.swift in Sources */,
 				514924292BBDEA3C00896874 /* CategorysViewSheet.swift in Sources */,
+				513686CC2BDEFE09008C3201 /* ViewsNavigation.swift in Sources */,
 				51EF66DB2BB661A2006DB89F /* DolarCard.swift in Sources */,
 				518EE30D2BCE04E70075B157 /* CardsHistorialMeses.swift in Sources */,
 				514EE2112B9FFD5A007C644B /* GeneralFunctions.swift in Sources */,
@@ -434,6 +445,7 @@
 				519ABFEA2B9D7A18007B919E /* TextfieldGeneral.swift in Sources */,
 				51C09F1B2BC4BEA900123BA0 /* EnumCategorias.swift in Sources */,
 				519ABFCE2B9D2A11007B919E /* InfoNameCard.swift in Sources */,
+				513686D02BDEFFE8008C3201 /* ViewFlowData.swift in Sources */,
 				519ABFE42B9D66C2007B919E /* TabBarCustom.swift in Sources */,
 				519ABFDE2B9D561C007B919E /* AppTheme.swift in Sources */,
 				515C881E2BB5F568007A8BCD /* DolarEnum.swift in Sources */,
