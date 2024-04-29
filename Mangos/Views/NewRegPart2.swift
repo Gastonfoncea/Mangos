@@ -148,12 +148,23 @@ struct NewRegPart2: View {
             .padding(.bottom,80)
            
         }
+        .navigationBarBackButtonHidden(true)
         .navigationTitle("Guardar Registro")
         .navigationBarTitleDisplayMode(.inline)
         .sheet(isPresented: $isShowingCategories, content: {
             CategorysViewSheet(isShowingCategories: $isShowingCategories, vmCategory: vmCategory, categorias: vmCategory.mostFrequent, selectedCategory: $selectedCategory)
         })
         .ignoresSafeArea(.keyboard)
+        .toolbar {
+            ToolbarItem(placement:.topBarLeading) {
+                Button {
+                    viewFlow.backToPrevious()
+                } label: {
+                    BackButton()
+                }
+
+            }
+        }
     }
 }
 

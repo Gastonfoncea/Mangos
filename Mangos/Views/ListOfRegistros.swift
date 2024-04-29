@@ -47,7 +47,18 @@ struct ListOfRegistros: View {
                 .bold()
             }
         }
+        .toolbar {
+            ToolbarItem(placement:.topBarLeading) {
+                Button {
+                    viewFlow.backToPrevious()
+                } label: {
+                    BackButton()
+                }
+
+            }
+        }
         .navigationTitle("Categoria")
+        .navigationBarBackButtonHidden(true)
     }
       
 }

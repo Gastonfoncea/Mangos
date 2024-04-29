@@ -56,6 +56,17 @@ struct NewRegistroP1: View {
         }
         .navigationTitle("Ingresa el monto")
         .navigationBarTitleDisplayMode(.inline)
+        .navigationBarBackButtonHidden(true)
+        .toolbar {
+            ToolbarItem(placement:.topBarLeading) {
+                Button {
+                    viewFlow.backToPrevious()
+                } label: {
+                    BackButton()
+                }
+
+            }
+        }
     }
 }
 

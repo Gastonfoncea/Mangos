@@ -10,6 +10,7 @@
 		513686CC2BDEFE09008C3201 /* ViewsNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513686CB2BDEFE09008C3201 /* ViewsNavigation.swift */; };
 		513686CE2BDEFE4C008C3201 /* ViewsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513686CD2BDEFE4C008C3201 /* ViewsFactory.swift */; };
 		513686D02BDEFFE8008C3201 /* ViewFlowData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513686CF2BDEFFE8008C3201 /* ViewFlowData.swift */; };
+		513686D22BDF1A10008C3201 /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513686D12BDF1A10008C3201 /* BackButton.swift */; };
 		514924292BBDEA3C00896874 /* CategorysViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 514924282BBDEA3C00896874 /* CategorysViewSheet.swift */; };
 		5149242B2BBDEC0700896874 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149242A2BBDEC0700896874 /* CategoryModel.swift */; };
 		5149242D2BBDFE7700896874 /* LogoYNombrePorTipo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5149242C2BBDFE7700896874 /* LogoYNombrePorTipo.swift */; };
@@ -72,6 +73,7 @@
 		513686CB2BDEFE09008C3201 /* ViewsNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsNavigation.swift; sourceTree = "<group>"; };
 		513686CD2BDEFE4C008C3201 /* ViewsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewsFactory.swift; sourceTree = "<group>"; };
 		513686CF2BDEFFE8008C3201 /* ViewFlowData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFlowData.swift; sourceTree = "<group>"; };
+		513686D12BDF1A10008C3201 /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		514924282BBDEA3C00896874 /* CategorysViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategorysViewSheet.swift; sourceTree = "<group>"; };
 		5149242A2BBDEC0700896874 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
 		5149242C2BBDFE7700896874 /* LogoYNombrePorTipo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoYNombrePorTipo.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				519ABFDF2B9D61AD007B919E /* PlusButton.swift */,
 				51B28A862BABC41A00667F14 /* ButtonTipo.swift */,
 				51870EAC2BB78E7500FDD7CA /* ButtonCuadrado.swift */,
+				513686D12BDF1A10008C3201 /* BackButton.swift */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -446,6 +449,7 @@
 				51C09F1B2BC4BEA900123BA0 /* EnumCategorias.swift in Sources */,
 				519ABFCE2B9D2A11007B919E /* InfoNameCard.swift in Sources */,
 				513686D02BDEFFE8008C3201 /* ViewFlowData.swift in Sources */,
+				513686D22BDF1A10008C3201 /* BackButton.swift in Sources */,
 				519ABFE42B9D66C2007B919E /* TabBarCustom.swift in Sources */,
 				519ABFDE2B9D561C007B919E /* AppTheme.swift in Sources */,
 				515C881E2BB5F568007A8BCD /* DolarEnum.swift in Sources */,
