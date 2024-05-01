@@ -9,6 +9,7 @@ import Foundation
 import SwiftData
 
 @Model
+
 class RegistrosModel{
     
     var tipo: String
@@ -24,5 +25,4 @@ class RegistrosModel{
         self.categoria = categoria
         self.fecha = fecha
     }
-    
 }

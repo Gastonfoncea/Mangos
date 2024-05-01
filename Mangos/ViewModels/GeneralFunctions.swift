@@ -12,7 +12,7 @@ class GeneralFunctions: ObservableObject {
     
     
     
-    //Conversion de datos
+    ///Conversion de datos
     func StringToDouble(valor:String) -> Double {
         let error = 0.00
         guard let valorInt = Double(valor) else { return error }
@@ -49,7 +49,7 @@ class GeneralFunctions: ObservableObject {
         
     }
     
-    //Visual
+    ///Visual
     func getTodayDate() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy" // Puedes ajustar el formato según tus preferencias
@@ -82,6 +82,44 @@ class GeneralFunctions: ObservableObject {
         }
     }
     
+    
+    
+    ///OBTENER EL PRIMER DIA DE CADA MES
+    //REVISAR si es correcto ya que necesitamos realizar la funcion apenas se convierte en el primer dia del mes
+    func startOfMonth() -> Bool {
+        
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month], from: currentDate)
+        
+        
+        if calendar.date(from: components)! == currentDate {
+            print("estamos en principio")
+            return true
+        } else {
+            print("Todavia Falta")
+            return false
+        }
+    }
+    
+    //opcion sugerida por chat gpt 
+    func startOfMonthGPT() -> Bool {
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let components = calendar.dateComponents([.year, .month], from: currentDate)
+        
+        // Obtener la fecha del primer día del mes
+        guard let firstDayOfMonth = calendar.date(from: components) else {
+            print("no se pudo obtener la fecha")
+            return false // No se pudo obtener la fecha del primer día del mes
+        }
+        
+        // Crear una fecha que represente las 00:00 del primer día del mes
+        let midnightFirstDayOfMonth = calendar.startOfDay(for: firstDayOfMonth)
+        
+        // Comparar si la fecha actual es igual a las 00:00 del primer día del mes
+        return currentDate == midnightFirstDayOfMonth
+    }
     
 }
 

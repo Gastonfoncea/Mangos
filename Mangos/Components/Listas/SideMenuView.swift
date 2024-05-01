@@ -39,6 +39,7 @@ struct SideMenuView: View {
                             
                         }
                         .padding()
+                        .frame(maxHeight:.infinity)
                         .frame(width:240,alignment: .leading)
                         .background(Color.colorMenu)
                         

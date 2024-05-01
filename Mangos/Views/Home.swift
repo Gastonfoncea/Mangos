@@ -17,93 +17,95 @@ struct Home: View {
     
     var body: some View {
         NavigationStack(path: $viewFlow.path) {
-            ZStack {
-                VStack{
-                    HStack{
-                        CardMontoHome(balance: vmRegistros.balanceTotal,ingresos: vmRegistros.sumaIngresos ,egresos: vmRegistros.sumaEgresos)
-                    }
-                    .padding(.horizontal,20)
-                    HStack(spacing:10){
-                        NavigationLink(destination:IngresosView()){
-                            ButtonTipo(tipo: Categorias.ingresos.rawValue)
-                        }
-                        NavigationLink(destination:GastosView()){
-                            ButtonTipo(tipo: Categorias.gastos.rawValue)
-                        }
-                        NavigationLink(destination:AhorrosView()){
-                            ButtonTipo(tipo: Categorias.ahorros.rawValue)
-                        }
-                        NavigationLink(destination:TarjetasView()){
-                            ButtonTipo(tipo: Categorias.tarjetas.rawValue)
-                        }
-                    }
-                    .frame(maxWidth: .infinity)
-                    .padding(.horizontal,20)
-                    .padding(.top,20)
-                    
+           // ScrollView {
+                ZStack {
                     VStack{
                         HStack{
-                            Text("Ultimas transacciones")
-                                .font(.title3)
-                                .fontWeight(.medium)
-                            
-                            Spacer()
-                            NavigationLink(destination: ListOfMovimientos()) {
-                                Text("Ver todas")
-                                    .font(.subheadline)
-                                    .fontWeight(.medium)
-                                    .foregroundStyle(Color.blueColorG)
+                            CardMontoHome(balance: vmRegistros.balanceTotal,ingresos: vmRegistros.sumaIngresos ,egresos: vmRegistros.sumaEgresos)
+                        }
+                        .padding(.horizontal,20)
+                        HStack(spacing:10){
+                            NavigationLink(destination:IngresosView()){
+                                ButtonTipo(tipo: Categorias.ingresos.rawValue)
+                            }
+                            NavigationLink(destination:GastosView()){
+                                ButtonTipo(tipo: Categorias.gastos.rawValue)
+                            }
+                            NavigationLink(destination:AhorrosView()){
+                                ButtonTipo(tipo: Categorias.ahorros.rawValue)
+                            }
+                            NavigationLink(destination:TarjetasView()){
+                                ButtonTipo(tipo: Categorias.tarjetas.rawValue)
                             }
                         }
                         .frame(maxWidth: .infinity)
                         .padding(.horizontal,20)
                         .padding(.top,20)
-                        .padding(.bottom,0)
                         
-                        List{
-                            ForEach(vmRegistros.fetchRegistrosTotal()) {item in
-                                ListViewItem2(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, categoria: item.categoria, fecha: item.fecha)
-                                    .listRowInsets(EdgeInsets(top: 12, leading: 20, bottom: 0, trailing: 20))
+                        VStack{
+                            HStack{
+                                Text("Ultimas transacciones")
+                                    .font(.title3)
+                                    .fontWeight(.medium)
+                                
+                                Spacer()
+                                NavigationLink(destination: ListOfMovimientos()) {
+                                    Text("Ver todas")
+                                        .font(.subheadline)
+                                        .fontWeight(.medium)
+                                        .foregroundStyle(Color.blueColorG)
+                                }
                             }
-                            .listRowSeparator(.hidden)
+                            .frame(maxWidth: .infinity)
+                            .padding(.horizontal,20)
+                            .padding(.top,20)
+                            .padding(.bottom,0)
+                            
+                            List{
+                                ForEach(vmRegistros.fetchRegistrosTotal()) {item in
+                                    ListViewItem2(descripcion: item.detalle, tipo: item.tipo, monto: item.monto, categoria: item.categoria, fecha: item.fecha)
+                                        .listRowInsets(EdgeInsets(top: 12, leading: 20, bottom: 0, trailing: 20))
+                                }
+                                .listRowSeparator(.hidden)
+                            }
+                            .padding(.top,-10)
+                            .listStyle(.plain)
                         }
-                        .padding(.top,-10)
-                        .listStyle(.plain)
                     }
+                    .offset(y:25)
+                    .toolbar {
+                        ToolbarItem(placement: .bottomBar) {
+                            Button {
+                                viewFlow.navigateToListOgReg()
+                            } label: {
+                                PlusButton()
+                                    .opacity(showMenu ? 0 : 1)
+                            }
+                            .animation(nil)
+                            .padding(.bottom,30)
+                            .navigationDestination(for:ViewsNavigation.self) {destination in
+                                ViewsFactory.setViewForDestination(destination)
+                            }
+                        }
+     
+                    }
+                    SideMenuView(isShowing: $showMenu)
                 }
-                .offset(y:25)
+                .toolbarBackground(.hidden, for: .bottomBar)
                 .toolbar {
-                    ToolbarItem(placement: .bottomBar) {
+                    ToolbarItem(placement: .topBarLeading) {
                         Button {
-                            viewFlow.navigateToListOgReg()
+                            showMenu.toggle()
                         } label: {
-                            PlusButton()
+                            ButtonCuadrado()
                                 .opacity(showMenu ? 0 : 1)
                         }
-                        .animation(nil)
-                        .padding(.bottom,30)
-                        .navigationDestination(for:ViewsNavigation.self) {destination in
-                            ViewsFactory.setViewForDestination(destination)
-                        }
+                        
                     }
- 
                 }
-                SideMenuView(isShowing: $showMenu)
-            }
-            .toolbarBackground(.hidden, for: .bottomBar)
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        showMenu.toggle()
-                    } label: {
-                        ButtonCuadrado()
-                            .opacity(showMenu ? 0 : 1)
-                    }
-                    
-                }
-            }
-            .navigationTitle("")
+                .navigationTitle("")
             .navigationBarTitleDisplayMode(.inline)
+           // }
         }
     }
 }
@@ -113,3 +115,5 @@ struct Home: View {
         .environmentObject(RegistrosViewModel())
         .environmentObject(ViewFlowData())
 }
+
+
